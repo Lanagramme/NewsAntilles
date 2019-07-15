@@ -9,14 +9,14 @@
     <title>NewsAntilles</title>
 </head>
 <body>
+    <div class="half">
+        
     <div class="frame">
-        <div class="screen">
-           
-           
-           
+        <div class="screen">       
+<!---  Version 1  --->
 <!---  NAVBAR  --->
             <div class="nav">
-                <h1 class="titre">NewsAntilles</h1>
+                <h1 class="titre" id="nav1">NewsAntilles</h1>
             </div>
 <!---   MENU   --->
             <div id="menu" class="all" style="display: none">
@@ -51,12 +51,8 @@
                 
             </div>
 <!---   FLUX   --->
-            
-            
-            <output class="all"></output>
-            
-            
-            
+            <output class="all output"></output>
+<!---  FOOTER  --->
             <div class="footer">
                 <div class="footerButton" id="FB1" onclick="rubrique('international');">
                     <p>accueil</p>
@@ -64,6 +60,35 @@
                 <div class="footerButton" id="FB2" onclick="affMenu()">
                     <p>menu</p>
                 </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <div class="half">
+        <div class="frame">
+            <div class="screen" id="screen2">     
+<!--- Version2 --->
+<!---  NAVBAR  --->
+                <div class="nav">
+                    <h1 class="titre">NewsAntilles</h1>
+                </div>
+<!---   MENU   --->
+                <div class="all2">
+                    <ul>
+                        <div class="list">
+                            <li onclick="rubrique('international')">Accueil</li>
+                            <li onclick="rubrique('societe')">Société</li>
+                            <li onclick="rubrique('politique')">Politique</li>
+                            <li onclick="rubrique('international')">Economie</li>
+                            <li onclick="rubrique('culture')">Sport</li>
+                            <li onclick="rubrique('planete')">Photo</li>
+                            <li onclick="rubrique('politique')">Direct</li>
+                        </div>
+                    </ul>
+                </div>
+<!---   FLUX   --->
+            <output></output>
+<!---  FOOTER  --->
             </div>
         </div>
     </div>

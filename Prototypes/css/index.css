@@ -23,6 +23,10 @@ body {
     max-height: 100vh; 
     overflow: hidden;
 }
+.half{
+    width: 50%;
+    float: left;
+}
 
 .frame {
     width: 320px;
@@ -85,3 +89,32 @@ output {
 .texteA{}
 /*css du lien des articles*/
 .lienA{}
+
+/*Version 2*/
+
+#screen2{
+     padding-top: 110px;
+}
+
+/*CSS de la navbar--------------------------------*/
+    .all2 ul {
+        padding: 0px;
+        overflow-x: scroll;
+        background-color: #fff;
+        position: absolute;
+        top: 93px;
+        width: 274px;
+    }
+
+    .all2 ul .list {
+        display: flex;
+        flex-wrap: nowrap;
+        height: 38px;
+
+    }
+
+    .all2>ul li {
+        display: inline-block;
+        margin: 10px;
+    }
+/*--------------------------------------------------*/

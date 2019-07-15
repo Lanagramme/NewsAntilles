@@ -3,7 +3,7 @@ rubrique('international');
 function affMenu(){
     $(".all" ).hide();
     $("#menu").show();
-    $(".nav" ).html('<h1>MENU</h1><p class="cog" onclick="affparam()">parametres</p>');
+    $("#nav1").html('<h1>MENU</h1><p class="cog" onclick="affparam()">parametres</p>');
 }
 
 function affAccueil(){
@@ -29,19 +29,19 @@ function rubrique(a){
         
         let di = document.createElement('div');
         di.className = "article section" + b;
-        document.querySelector('output').appendChild(di);
+        $('output').append(di);
 
         let h2 = document.createElement('h2');
         h2.textContent = item.querySelector('title').textContent;
         h2.className = "titreA";
         
-        document.querySelector('.section' + b).appendChild(h2);
+        $('.section' + b).append(h2);
 
         let p = document.createElement('p');
         p.innerHTML = item.querySelector('description').textContent;
         p.className = "texteA"
         
-        document.querySelector('.section' + b).appendChild(p);
+        $('.section' + b).append(p);
 
         let a = document.createElement('a');
         let linkText = document.createTextNode("Lire plus >>");
@@ -50,7 +50,7 @@ function rubrique(a){
         a.href = item.querySelector('link').textContent;
         a.className = "lienA"
         
-        document.querySelector('.section' + b).appendChild(a);
+        $('.section' + b).append(a);
         
         b++;
        })
