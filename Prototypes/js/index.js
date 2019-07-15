@@ -11,7 +11,7 @@ function affAccueil(){
     $("output").show();
     $("#nav1" ).html('<h1>NewsAntilles</h1>');
 }
-
+      
 function affparam(){
     $(".all"  ).hide();
     $("#param").show();
