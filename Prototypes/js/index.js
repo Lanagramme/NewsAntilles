@@ -33,10 +33,14 @@ function rubrique(a){
 
         let h2 = document.createElement('h2');
         h2.textContent = item.querySelector('title').textContent;
+        h2.className = "titreA";
+        
         document.querySelector('.section' + b).appendChild(h2);
 
         let p = document.createElement('p');
         p.innerHTML = item.querySelector('description').textContent;
+        p.className = "texteA"
+        
         document.querySelector('.section' + b).appendChild(p);
 
         let a = document.createElement('a');
@@ -44,6 +48,8 @@ function rubrique(a){
         a.appendChild(linkText);
         a.title = "my title text";
         a.href = item.querySelector('link').textContent;
+        a.className = "lienA"
+        
         document.querySelector('.section' + b).appendChild(a);
         
         b++;
