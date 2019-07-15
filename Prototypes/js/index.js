@@ -15,7 +15,7 @@ function affAccueil(){
 function affparam(){
     $(".all"  ).hide();
     $("#param").show();
-    $(".nav"  ).html('<p class="back" onclick="affMenu()">back</p><h1>NOTIFICATIONS</h1>')
+    $(".nav"  ).html('<p class="back" onclick="affMenu()">back</p>')
 }
 function rubrique(a){
     let b=0;
