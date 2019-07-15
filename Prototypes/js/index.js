@@ -3,19 +3,19 @@ rubrique('international');
 function affMenu(){
     $(".all" ).hide();
     $("#menu").show();
-    $(".nav" ).html('<h1>MENU</h1><p class="cog" onclick="affparam()">parametres</p>');
+    $("#nav1").html('<h1>MENU</h1><img src="img/icons8-settings-50.png" alt="parametres" class="icones" id="cog" onclick="affparam()">');
 }
 
 function affAccueil(){
     $(".all"  ).hide();
     $("output").show();
-    $(".nav"  ).html('<h1>NewsAntilles</h1>');
+    $("#nav1" ).html('<h1>NewsAntilles</h1>');
 }
-
+      
 function affparam(){
     $(".all"  ).hide();
     $("#param").show();
-    $(".nav"  ).html('<p class="back" onclick="affMenu()">back</p>')
+    $("#nav1" ).html('<img onclick="affMenu()" class="icones right" style="transform:rotate(180deg)" src="img/icons8-material-sharp-48.png" alt="retour"><h1>NOTIFICATIONS</h1>')
 }
 function rubrique(a){
     let b=0;
@@ -29,22 +29,28 @@ function rubrique(a){
         
         let di = document.createElement('div');
         di.className = "article section" + b;
-        document.querySelector('output').appendChild(di);
+        $('output').append(di);
 
         let h2 = document.createElement('h2');
         h2.textContent = item.querySelector('title').textContent;
-        document.querySelector('.section' + b).appendChild(h2);
+        h2.className = "titreA";
+        
+        $('.section' + b).append(h2);
 
         let p = document.createElement('p');
         p.innerHTML = item.querySelector('description').textContent;
-        document.querySelector('.section' + b).appendChild(p);
+        p.className = "texteA"
+        
+        $('.section' + b).append(p);
 
         let a = document.createElement('a');
         let linkText = document.createTextNode("Lire plus >>");
         a.appendChild(linkText);
         a.title = "my title text";
         a.href = item.querySelector('link').textContent;
-        document.querySelector('.section' + b).appendChild(a);
+        a.className = "lienA"
+        
+        $('.section' + b).append(a);
         
         b++;
        })

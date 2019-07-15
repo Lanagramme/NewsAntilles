@@ -23,6 +23,10 @@ body {
     max-height: 100vh; 
     overflow: hidden;
 }
+.half{
+    width: 50%;
+    float: left;
+}
 
 .frame {
     width: 320px;
@@ -46,11 +50,13 @@ body {
 }
 
 
-.screen .nav {
+/* CSS de la navbar*/
+.screen .nav{
     /*Ne pas modifier !!!*/
     position: absolute;
     top: 43px;
-    width: 274px;
+    left: 7%;
+    width: 86%;
     
     /**/
     text-align: center;
@@ -60,8 +66,7 @@ body {
     
 }
 
-
-
+/* CSS du footer*/
 .screen .footer{
     /*Ne pas modifier !!!*/
     position: absolute;
@@ -75,12 +80,12 @@ body {
     
       
 }
-
+/*Zone d'affichage des articles*/
 output {
     padding-bottom: 100px;
 }
 
-
+/*css des articles*/
 .article{
     border: thin #c0c0c0 solid;
 }
@@ -128,5 +133,60 @@ h3{
     color: black;
     
 }
+/*css du titre des articles*/
+.titreA{}
+/*css du texte des articles*/
+.texteA{}
+/*css du lien des articles*/
+.lienA{}
+
+/*Version 2*/
+
+#screen2{
+     padding-top: 110px;
+}
+
+/*CSS de la navbar--------------------------------*/
+    .all2 ul {
+        padding: 0px;
+        overflow-x: scroll;
+        background-color: #fff;
+        position: absolute;
+        top: 93px;
+        width: 274px;
+    }
+    .all2 ul .list {
+        display: flex;
+        flex-wrap: nowrap;
+        height: 38px;
+
+    }
+
+    .all2>ul li {
+        display: inline-block;
+        margin: 10px;
+    }
+
+/*--------------------------------------------------*/
 
 
+.icones {
+    width: 30px;
+}
+
+#cog {
+    position: absolute;
+    right: 19px;
+    top: 17px
+}
+
+.right{
+    position: absolute;
+    left: 19px;
+    top: 17px
+}
+
+
+::-webkit-scrollbar{
+    width: 0px;
+}
