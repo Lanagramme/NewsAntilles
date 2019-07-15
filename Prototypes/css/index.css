@@ -54,7 +54,8 @@ body {
     /*Ne pas modifier !!!*/
     position: absolute;
     top: 43px;
-    width: 274px;
+    left: 7%;
+    width: 86%;
     
     /**/
     text-align: center;
@@ -105,7 +106,6 @@ output {
         top: 93px;
         width: 274px;
     }
-
     .all2 ul .list {
         display: flex;
         flex-wrap: nowrap;
@@ -117,4 +117,22 @@ output {
         display: inline-block;
         margin: 10px;
     }
+
 /*--------------------------------------------------*/
+
+
+.icones {
+    width: 30px;
+}
+
+#cog {
+    position: absolute;
+    right: 19px;
+    top: 17px
+}
+
+.right{
+    position: absolute;
+    left: 19px;
+    top: 17px
+}

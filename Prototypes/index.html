@@ -1,97 +1,98 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta name="format-detection" content="telephone=no">
-    <meta name="msapplication-tap-highlight" content="no">
-    <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
-    <link rel="stylesheet" type="text/css" href="css/index.css">
-    <meta http-equiv="Content-Security-Policy" script-src='unsafe-inline';>
-    <title>NewsAntilles</title>
+   <meta name="format-detection" content="telephone=no">
+   <meta name="msapplication-tap-highlight" content="no">
+   <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
+   <link rel="stylesheet" type="text/css" href="css/index.css">
+   <meta http-equiv="Content-Security-Policy" script-src='unsafe-inline';>
+   <title>NewsAntilles</title>
 </head>
 <body>
-    <div class="half">
-        
-    <div class="frame">
-        <div class="screen">       
+   <div class="half">
+      
+   <div class="frame">
+      <div class="screen">      
 <!---  Version 1  --->
 <!---  NAVBAR  --->
-            <div class="nav">
-                <h1 class="titre" id="nav1">NewsAntilles</h1>
-            </div>
+         <div class="nav" id="nav1">
+            <h1 class="titre">NewsAntilles</h1>
+         </div>
 <!---   MENU   --->
-            <div id="menu" class="all" style="display: none">
-                <ul>
-                    <li onclick="rubrique('international')">Accueil</li>
-                </ul>
-                <h4>RUBRIQUES</h4>
-                <ul>
-                    <li onclick="rubrique('societe')">Société</li>
-                    <li onclick="rubrique('politique')">Politique</li>
-                    <li onclick="rubrique('international')">Economie</li>
-                    <li onclick="rubrique('culture')">Sport</li>
-                    <li onclick="rubrique('planete')">Photo</li>
-                    <li onclick="rubrique('politique')">Direct</li>
-                </ul>
-            </div>
+         <div id="menu" class="all" style="display: none">
+            <ul>
+               <li onclick="rubrique('international')">Accueil</li>
+            </ul>
+            <h4>RUBRIQUES</h4>
+            <ul>
+               <li onclick="rubrique('societe')">Société</li>
+               <li onclick="rubrique('politique')">Politique</li>
+               <li onclick="rubrique('international')">Economie</li>
+               <li onclick="rubrique('culture')">Sport</li>
+               <li onclick="rubrique('planete')">Photo</li>
+               <li onclick="rubrique('politique')">Direct</li>
+            </ul>
+         </div>
 <!---PARAMETRES--->
-            <div id="param" class="all" style="display: none">
-               
-               <ul>
-                   <li>Alertes Info</li>
-               </ul>
-               <h3>A PROPOS</h3>
-               <ul>
-                   <li>Nous contacter</li>
-                   <li>Mentions légales</li>
-               </ul>
-               <h3>INFORMATION SCOMPLEMENTAIRES</h3>
-               <ul>
-                   <li>Version: 0.0.1</li>
-               </ul>
-                
-            </div>
+         <div id="param" class="all" style="display: none">
+            
+            <ul>
+               <li>Alertes Info</li>
+            </ul>
+            <h3>A PROPOS</h3>
+            <ul>
+               <li>Nous contacter</li>
+               <li>Mentions légales</li>
+            </ul>
+            <h3>INFORMATION SCOMPLEMENTAIRES</h3>
+            <ul>
+               <li>Version: 0.0.1</li>
+            </ul>
+            
+         </div>
 <!---   FLUX   --->
-            <output class="all output"></output>
+         <output class="all output"></output>
 <!---  FOOTER  --->
-            <div class="footer">
-                <div class="footerButton" id="FB1" onclick="rubrique('international');">
-                    <p>accueil</p>
-                </div>
-                <div class="footerButton" id="FB2" onclick="affMenu()">
-                    <p>menu</p>
-                </div>
+         <div class="footer">
+            <div class="footerButton" id="FB1" onclick="rubrique('international');">
+               <p>accueil</p>
             </div>
-        </div>
-    </div>
-    </div>
-    <div class="half">
-        <div class="frame">
-            <div class="screen" id="screen2">     
+            <div class="footerButton" id="FB2" onclick="affMenu()">
+               <p>menu</p>
+               
+            </div>
+         </div>
+      </div>
+   </div>
+   </div>
+   <div class="half">
+      <div class="frame">
+         <div class="screen" id="screen2">    
 <!--- Version2 --->
 <!---  NAVBAR  --->
-                <div class="nav">
-                    <h1 class="titre">NewsAntilles</h1>
-                </div>
-<!---   MENU   --->
-                <div class="all2">
-                    <ul>
-                        <div class="list">
-                            <li onclick="rubrique('international')">Accueil</li>
-                            <li onclick="rubrique('societe')">Société</li>
-                            <li onclick="rubrique('politique')">Politique</li>
-                            <li onclick="rubrique('international')">Economie</li>
-                            <li onclick="rubrique('culture')">Sport</li>
-                            <li onclick="rubrique('planete')">Photo</li>
-                            <li onclick="rubrique('politique')">Direct</li>
-                        </div>
-                    </ul>
-                </div>
-<!---   FLUX   --->
-            <output></output>
-<!---  FOOTER  --->
+            <div class="nav">
+               <h1 class="titre">NewsAntilles</h1>
             </div>
-        </div>
-    </div>
+<!---   MENU   --->
+            <div class="all2">
+               <ul>
+                  <div class="list">
+                     <li onclick="rubrique('international')">Accueil</li>
+                     <li onclick="rubrique('societe')">Société</li>
+                     <li onclick="rubrique('politique')">Politique</li>
+                     <li onclick="rubrique('international')">Economie</li>
+                     <li onclick="rubrique('culture')">Sport</li>
+                     <li onclick="rubrique('planete')">Photo</li>
+                     <li onclick="rubrique('politique')">Direct</li>
+                  </div>
+               </ul>
+            </div>
+<!---   FLUX   --->
+         <output></output>
+<!---  FOOTER  --->
+         </div>
+      </div>
+   </div>
 
 <script type="text/javascript" src="js/jquery-3.4.1.js"></script>
 <script type="text/javascript" src="js/index.js"></script>

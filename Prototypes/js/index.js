@@ -3,19 +3,19 @@ rubrique('international');
 function affMenu(){
     $(".all" ).hide();
     $("#menu").show();
-    $("#nav1").html('<h1>MENU</h1><p class="cog" onclick="affparam()">parametres</p>');
+    $("#nav1").html('<h1>MENU</h1><img src="img/icons8-settings-50.png" alt="parametres" class="icones" id="cog" onclick="affparam()">');
 }
 
 function affAccueil(){
     $(".all"  ).hide();
     $("output").show();
-    $(".nav"  ).html('<h1>NewsAntilles</h1>');
+    $("#nav1" ).html('<h1>NewsAntilles</h1>');
 }
 
 function affparam(){
     $(".all"  ).hide();
     $("#param").show();
-    $(".nav"  ).html('<p class="back" onclick="affMenu()">back</p><h1>NOTIFICATIONS</h1>')
+    $("#nav1" ).html('<img onclick="affMenu()" class="icones right" style="transform:rotate(180deg)" src="img/icons8-material-sharp-48.png" alt="retour"><h1>NOTIFICATIONS</h1>')
 }
 function rubrique(a){
     let b=0;
