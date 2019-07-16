@@ -106,6 +106,7 @@ h3{
 }
 
 .un{
+    padding: 0px;
     list-style-type: none;
     text-align: center;
     text-transform: uppercase;
