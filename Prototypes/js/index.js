@@ -32,9 +32,11 @@ function affparam(){
 
 function rubrique(a){
    affAccueil();  
-    try { 
+    try {
        if (event.currentTarget.classList.contains('under'))
        {event.currentTarget.style.borderBottom = '2px solid #db5e11'; }
+        bob = event.currentTarget.innerHTML;
+        $('.nav h1').html(bob);
    } 
    catch {}
    let b=0;
