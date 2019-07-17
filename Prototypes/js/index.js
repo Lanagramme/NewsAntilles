@@ -1,4 +1,5 @@
 rubrique('international');
+$('#frist').css('border-bottom', '2px solid #db5e11')
 
 function affMenu(){
    $(".all" ).hide();
