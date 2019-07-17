@@ -4,8 +4,12 @@ function affMenu(){
    $(".all" ).hide();
    $("#menu").show();
    $("#nav1").html('<h1>Menu</h1><img src="img/image 5.png" alt="parametres" class="icones" id="cog" onclick="affparam()">');
-    $('.fbi1').attr('src', 'img/icons8-accueil-50.png');
-    $('.fbi2').attr('src', 'img/icons8-menu-48 (1).png');
+   $('.fbi1').attr('src', 'img/icons8-accueil-50.png');
+   $('.fbi2').attr('src', 'img/icons8-menu-48 (1).png');
+   $('.fp2').css('color', '#f58c09');
+   $('.fp1').css('color', 'black');
+    
+    
     
 }
 
@@ -13,8 +17,10 @@ function affAccueil(){
    $(".all"  ).hide();
    $("output").show();
    $("#nav1" ).html('<h1>NewsAntilles</h1>');
-    $('.fbi1').attr('src', 'img/icons8-accueil-50 (1).png');
-    $('.fbi2').attr('src', 'img/icons8-menu-48.png');
+   $('.fbi1').attr('src', 'img/icons8-accueil-50 (1).png');
+   $('.fbi2').attr('src', 'img/icons8-menu-48.png');
+   $('.fp1').css('color', '#f58c09');
+   $('.fp2').css('color', 'black');
 }
      
 function affparam(){
