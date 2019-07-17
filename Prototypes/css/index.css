@@ -236,3 +236,54 @@ h3{
 
 
 ::-webkit-scrollbar{ width: 0px; }
+
+.menuV2 {
+    width: 277px;
+    height: 524px;
+    top: 43px;
+    position: absolute;
+    z-index: 100;
+    left: 22px
+}
+
+.menuV2 .side {
+    width: 75%;
+    height: 100%;
+    background-color: white;
+    position: absolute;
+}
+
+.menuV2 .bar {
+    position: absolute;
+    color: white;
+    width: 100%;
+    height: 80px;
+    background-color: #152D8E;
+}
+
+.logo {
+    width: 60px;
+    height: 60px;
+    background-color: orangered;
+    position: absolute;
+    top: 9px;
+    left: 9px;
+}
+
+.bar .title {
+    text-align: center;
+    padding-top: 15px;
+}
+
+.content {
+    position:absolute;
+    top: 80px;
+}
+
+.opaque {
+    position: absolute;
+    right: 0px;
+    width: 25%;
+    height: 100%;
+    background-color: #000000b1;
+}

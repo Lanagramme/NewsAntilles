@@ -3,7 +3,7 @@ $('#frist').css('border-bottom', '2px solid #db5e11')
 
 function affMenu(){
    $(".all" ).hide();
-   $("#menu").show();
+   $(".menu").show();
    $("#nav1").html('<h1>Menu</h1><img src="img/image 5.png" alt="parametres" class="icones" id="cog" onclick="affparam()">');
    $('.fbi1').attr('src', 'img/icons8-accueil-50.png');
    $('.fbi2').attr('src', 'img/icons8-menu-48 (1).png');
