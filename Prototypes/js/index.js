@@ -7,10 +7,7 @@ function affMenu(){
    $('.fbi1').attr('src', 'img/icons8-accueil-50.png');
    $('.fbi2').attr('src', 'img/icons8-menu-48 (1).png');
    $('.fp2').css('color', '#db5e11');
-   $('.fp1').css('color', 'black');
-    
-    
-    
+   $('.fp1').css('color', 'black');  
 }
 
 function affAccueil(){
@@ -35,7 +32,7 @@ function rubrique(a){
     try {
        if (event.currentTarget.classList.contains('under'))
        {event.currentTarget.style.borderBottom = '2px solid #db5e11'; }
-        bob = event.currentTarget.innerHTML;
+        bob = event.currentTarget.innerText;
         $('.nav h1').html(bob);
    } 
    catch {}
