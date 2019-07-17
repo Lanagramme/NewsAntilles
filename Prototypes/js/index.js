@@ -6,7 +6,7 @@ function affMenu(){
    $("#nav1").html('<h1>Menu</h1><img src="img/image 5.png" alt="parametres" class="icones" id="cog" onclick="affparam()">');
    $('.fbi1').attr('src', 'img/icons8-accueil-50.png');
    $('.fbi2').attr('src', 'img/icons8-menu-48 (1).png');
-   $('.fp2').css('color', '#f58c09');
+   $('.fp2').css('color', '#db5e11');
    $('.fp1').css('color', 'black');
     
     
@@ -19,7 +19,7 @@ function affAccueil(){
    $("#nav1" ).html('<h1>NewsAntilles</h1>');
    $('.fbi1').attr('src', 'img/icons8-accueil-50 (1).png');
    $('.fbi2').attr('src', 'img/icons8-menu-48.png');
-   $('.fp1').css('color', '#f58c09');
+   $('.fp1').css('color', '#db5e11');
    $('.fp2').css('color', 'black');
 }
      
@@ -28,7 +28,14 @@ function affparam(){
    $("#param").show();
    $("#nav1" ).html('<img onclick="affMenu()" class="icones right" style="transform:rotate(none)" src="img/back.png" alt="retour"><h1>Paramètres</h1>')
 }
+
 function rubrique(a){
+    $('li').css('border-bottom', '0px solid black')
+    try {
+        event.currentTarget.style.borderBottom = '2px solid #db5e11'
+    }
+    catch{}
+   
    let b=0;
    $('output').html('');
    affAccueil();

@@ -216,7 +216,8 @@ h3{
 
     .all2>ul li {
         display: inline-block;
-        margin: 10px;
+        margin: 0px;
+        padding: 10px
     }
 
 /*--------------------------------------------------*/
