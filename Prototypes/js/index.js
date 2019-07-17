@@ -14,6 +14,7 @@ function affMenu(){
 }
 
 function affAccueil(){
+   $('li').css("border-bottom", "0px solid black")
    $(".all"  ).hide();
    $("output").show();
    $("#nav1" ).html('<h1>NewsAntilles</h1>');
@@ -30,15 +31,14 @@ function affparam(){
 }
 
 function rubrique(a){
-    $('li').css('border-bottom', '0px solid black')
-    try {
-        event.currentTarget.style.borderBottom = '2px solid #db5e11'
-    }
-    catch{}
-   
+   affAccueil();  
+    try { 
+       if (event.currentTarget.classList.contains('under'))
+       {event.currentTarget.style.borderBottom = '2px solid #db5e11'; }
+   } 
+   catch {}
    let b=0;
    $('output').html('');
-   affAccueil();
    fetch("https://www.bfmtv.com/rss/" + a + "/").then((res) => {
   res.text().then((xmlTxt) => {
    var domParser = new DOMParser();
