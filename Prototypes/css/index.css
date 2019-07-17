@@ -30,7 +30,7 @@ body {
 
 .frame {
     width: 320px;
-    height: 550px;
+    height: 600px;
     margin: auto ;
     margin-top: 50px;
     background-color: white;
@@ -41,7 +41,7 @@ body {
 
 .screen {
     width: 280px;
-    height: 480px;
+    height: 530px;
     margin: 40px auto;
     padding-top: 50px;
     border: 3px #c0c0c0 solid;
@@ -56,9 +56,13 @@ body {
     position: absolute;
     top: 43px;
     left: 7%;
-    width: 86%;
+    width: 87%;
+    border-bottom-style: solid;
+    border-bottom-color: #CC641F;
+;
     
     /**/
+    font-size: 85%;
     text-align: center;
     color: white;
     background-color: #152D8E;
@@ -75,65 +79,102 @@ body {
     
     /**/
     text-align: center;
-    background-color: #CDCDCD;
+    background-color: #fff;
+    box-shadow: #d3d3d3bf 0px -1px 5px 0px;
     
     
       
+}
+
+.footerButton {
+    width: 50%;
+    float: left;
+    padding: 3px;
+}
+
+.footerButton>img {
+    width: 23px;
+}
+
+.footerButton>p {
+    margin: 0px;
+    padding: 0px;
+    font-size: 9px;
 }
 /*Zone d'affichage des articles*/
 output {
     padding-bottom: 100px;
 }
 
+
 /*css des articles*/
 .article{
     border: thin #c0c0c0 solid;
 }
 
-h3{    
-    padding: 4px;
-    background: #CC641F;
+
+
+h3{ 
     text-align: center;
-    color: white;
+    color: white;   
+    background: #CC641F;
+    
+    
 }
+
 .zero{
+    padding-left: 2%;
     list-style-type: none;
-    font-family: Arial, sans-serif;
-    font-size: 100%;
-    color: black;
+    font-family: sans-serif;
+    font-weight: bold;
+    font-size: 140%;
     line-height: 100%;    
     
 }
 
 .un{
-    padding: 0px;
-    list-style-type: none;
-    text-align: center;
-    text-transform: uppercase;
-    font-family: Arial, sans-serif;
-    font-size: 100%;
-    color: black;
+    list-style-position: inside;
+    list-style-image: url('../img/puce.png');
+    text-align: left;
+    font-family: sans-serif;
+    font-weight: bold;
+    padding-left: 3%;
+    font-size: 140%;
     line-height: 200%;
     
-}
+ }
 
 .deux{
-    list-style-type: none;
-    font-family: Arial, sans-serif;
-    font-size: 100%;
-    color: black;
-    line-height: 280%;
+      list-style-type: none;
+      font-family: sans-serif;
+      font-weight: bold;
+      font-size: 140%;
+      line-height: 140%;
+      padding-left: 1%;
+      padding-right: 1%;
     
-    
-}
+  }
 
 .trois{
     list-style-type: none;
-    font-family: Arial, sans-serif;
-    font-size: 100%;
-    color: black;
+    padding-left: 2%;
+    font-family: sans-serif;
+    font-weight: bold;
+    font-size: 120%;
     
 }
+/*séparateur*/
+#hr1, #hr2, #hr3, #hr4, #hr5, #hr6, #hr7{
+    border: 0;
+    height: 2px;
+    background-image: linear-gradient(to right, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0));
+}
+
+#hr8, #hr9, #hr10{
+    border-top: 1px solid black;
+}
+
+
 /*css du titre des articles*/
 .titreA{}
 /*css du texte des articles*/
@@ -147,19 +188,29 @@ h3{
      padding-top: 110px;
 }
 
+.titre{
+   /*vide pour le moment*/ 
+}
+
 /*CSS de la navbar--------------------------------*/
     .all2 ul {
         padding: 0px;
         overflow-x: scroll;
-        background-color: #fff;
+        background-color: #152D8E;
         position: absolute;
-        top: 93px;
+        top: 85px;
         width: 274px;
+        border-top-style: solid;
+        border-top-color: #CC641F;
+        
     }
     .all2 ul .list {
         display: flex;
         flex-wrap: nowrap;
         height: 38px;
+        color: white;
+        text-transform: uppercase;
+        font-family: fantasy;
 
     }
 
@@ -171,23 +222,19 @@ h3{
 /*--------------------------------------------------*/
 
 
-.icones {
-    width: 30px;
-}
+.icones { width: 30px; }
 
 #cog {
     position: absolute;
     right: 19px;
-    top: 17px
+    top: 13px
 }
 
 .right{
     position: absolute;
     left: 19px;
-    top: 17px
+    top: 13px
 }
 
 
-::-webkit-scrollbar{
-    width: 0px;
-}
+::-webkit-scrollbar{ width: 0px; }
