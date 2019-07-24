@@ -57,7 +57,7 @@ body {
     left: 7%;
     width: 87%;
     border-bottom-style: solid;
-    border-bottom-color: #D76147;
+    border-bottom-color: #CC641F;
 ;
     
     /**/
@@ -77,8 +77,10 @@ body {
     width: 274px;
     
     /**/
+    border-top-style: solid;
+    border-top-color: #CC641F;
     text-align: center;
-    background-color: #fff;
+    background-color: #e0e0e0;
     box-shadow: #d3d3d3bf 0px -1px 5px 0px;
     
     
@@ -114,6 +116,7 @@ output {
 
 
 h3{ 
+    
     text-align: center;
     color: white;   
     background: #CC641F;
@@ -202,9 +205,9 @@ h3{
         border-top-style: solid;
         border-top-color: #D76147;
         display: flex;
-        flex-wrap: nowrap;
+        white-space: nowrap;
         color: white;
-        text-transform: uppercase;
+        text-align: right;
         font-family: fantasy;
         background-color: transparent;
     }
@@ -213,7 +216,7 @@ h3{
         display: inline-block;
         margin: 0px;
         padding: 10px;
-        background-color: #2e62c2;
+        background-color:#2e62c2;
     }
 
 /*--------------------------------------------------*/
@@ -248,7 +251,7 @@ h3{
 .menuV2 .side {
     width: 75%;
     height: 100%;
-    background-color: white;
+    background-color: #e0e0e0;
     position: absolute;
 }
 
@@ -256,17 +259,17 @@ h3{
     position: absolute;
     color: white;
     width: 100%;
-    height: 80px;
-    background-color: #152D8E;
-}
-
-.logo {
-    width: 60px;
-    height: 60px;
-    background-color: orangered;
-    position: absolute;
-    top: 9px;
-    left: 9px;
+    height: 57px;
+    
+    
+    background: url('../img/logonew.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 189px 40px;
+    background-color:#2e62c2;
+    border-bottom-style: solid;
+    border-bottom-color: #D76147;
+    
 }
 
 .bar .title {
