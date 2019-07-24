@@ -195,12 +195,12 @@ h3{
     .all2 ul {
         padding: 0px;
         overflow-x: scroll;
-        background-color: #152D8E;
+        background-color: #2e62c2;
         position: absolute;
         top: 85px;
         width: 274px;
         border-top-style: solid;
-        border-top-color: #CC641F;
+        border-top-color: #D76147;
         display: flex;
         flex-wrap: nowrap;
         color: white;
@@ -213,7 +213,7 @@ h3{
         display: inline-block;
         margin: 0px;
         padding: 10px;
-        background-color: #152D8E;
+        background-color: #2e62c2;
     }
 
 /*--------------------------------------------------*/
