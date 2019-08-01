@@ -182,8 +182,6 @@ h3{
 .titreA{}
 /*css du texte des articles*/
 .texteA{}
-/*css du lien des articles*/
-.lienA{}
 
 /*Version 2*/
 
@@ -292,8 +290,9 @@ h3{
 }
 
 .iframe{
-    height: 525px;
+    height: 473px;
     width: 275px;
     position: absolute;
-    top: 43px;
+    top: 99px;
+    border: 0px;
 }

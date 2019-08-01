@@ -1,6 +1,6 @@
 
 rubrique('international');
-$('#frist').css('border-bottom', '2px solid #db5e11')
+$('#frist').css('border-bottom', '2px solid #db5e11');
 
 function affMenu(){
    $(".all" ).hide();
@@ -13,7 +13,7 @@ function affMenu(){
 }
 
 function affAccueil(){
-   $('li'    ).css("border-bottom", "0px solid black")
+   $('li'    ).css("border-bottom", "0px solid black");
    $(".all"  ).hide();
    $("output").show();
    $("#nav1" ).html('<h1>NewsAntilles</h1>');
@@ -26,7 +26,7 @@ function affAccueil(){
 function affparam(){
    $(".all"  ).hide();
    $("#param").show();
-   $("#nav1" ).html('<img onclick="affMenu()" class="icones right" style="transform:rotate(none)" src="img/back.png" alt="retour"><h1>Paramètres</h1>')
+   $("#nav1" ).html('<img onclick="affMenu()" class="icones right" src="img/back.png" alt="retour"><h1>Paramètres</h1>');
 }
 
 function rubrique(a){
@@ -35,35 +35,36 @@ function rubrique(a){
        if (event.currentTarget.classList.contains('under'))
        {event.currentTarget.style.borderBottom = '2px solid #db5e11'; }
         bob = event.currentTarget.innerText;
-        $('.nav h1').html(bob);
-   } 
-   catch {}
-   let b=0;
+        $('#nav1 h1').html(bob);
+   } catch { }
+
+   b=0;
    $('output').html('');
    fetch("https://www.bfmtv.com/rss/" + a + "/").then((res) => {
    res.text().then((xmlTxt) => {
       var domParser = new DOMParser();
-      let doc = domParser.parseFromString(xmlTxt, 'text/xml');
+      doc = domParser.parseFromString(xmlTxt, 'text/xml');
          doc.querySelectorAll('item').forEach((item) => {
       
-            let tit = item.querySelector('link').textContent;
+            tit = item.querySelector('link').textContent;
 			
 			
-            let di = document.createElement('div');
+            di = document.createElement('div');
             di.className = "article section" + b;
 			
-			di = '<div class="article section' +b+ '" onclick="lire(`' +tit+ '`)"></div>'
+            di = '<div class="article section' +b+ '" onclick="lire(`' +tit+ '`)"></div>';
+            //di = `<div class="article section${b}" onclick="lire('${tit}')"></div>`;
             $('output').append(di);
 
-            let h2 = document.createElement('h2');
+            h2 = document.createElement('h2');
             h2.textContent = item.querySelector('title').textContent;
             h2.className = "titreA";
       
             $('.section' + b).append(h2);
 
-            let p = document.createElement('p');
+            p = document.createElement('p');
             p.innerHTML = item.querySelector('description').textContent;
-            p.className = "texteA"
+            p.className = "texteA";
       
             $('.section' + b).append(p);
             b++;
@@ -74,7 +75,28 @@ function rubrique(a){
 
 
 function lire(a){
-	alert('lire');
-	let f = "<iframe class='iframe' src='" +a+ "'>"
+	f = "<iframe class='iframe' src='" +a+ "'>";
 	$('.screen').append(f);
+   document.getElementById('nav1').insertAdjacentHTML("afterbegin", '<img onclick="closeFrame()" class="icones right retour" src="img/back.png" alt="retour">');
+   $('#nav2').html('<img onclick="closeFrame()" class="icones right retour" src="img/back.png" alt="retour"><h1>NewsAntilles</h1>');
+}  
+
+function closeFrame(){
+   g = document.getElementsByClassName('iframe');
+   fa = g.length;
+   
+   for(i= g.length; i>0; i--){
+      g[i-1].parentNode.removeChild(g[i-1]);
+   }
+
+
+   h = document.getElementsByClassName('retour');
+   fi = h.length;
+   
+   for(j= h.length; j>0; j--){
+      h[j-1].parentNode.removeChild(h[j-1]);
+   }
+   
+   $('#nav2').html('<img onclick="affMenu()" class="right icones" src="img/icons8-menu-24.png" alt=""><h1 class="titre" id="titre2">NewsAntilles</h1>')
+   
 }
