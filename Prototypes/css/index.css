@@ -23,8 +23,7 @@ body {
     overflow: hidden;
 }
 .half{
-    width: 50%;
-    float: left;
+    width: 100%;
 }
 
 .frame {
@@ -70,23 +69,6 @@ body {
     
 }
 
-/* CSS du footer*/
-.screen .footer{
-    /*Ne pas modifier !!!*/
-    position: absolute;
-    bottom: 31px;
-    width: 274px;
-    
-    /**/
-    border-top-style: solid;
-    border-top-color: #CC641F;
-    text-align: center;
-    background-color: #e0e0e0;
-    box-shadow: #d3d3d3bf 0px -1px 5px 0px;
-    
-    
-      
-}
 
 .footerButton {
     width: 50%;
