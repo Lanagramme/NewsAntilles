@@ -38,10 +38,10 @@ body {
 }
 
 .screen {
-    width: 280px;
-    height: 530px;
+    width: 100%;
+    height: 100%;
     margin: 40px auto;
-    padding-top: 50px;
+    padding-top: 25px;
     border: 3px #c0c0c0 solid;
     border-radius: 5px;
     overflow-y: scroll;
@@ -52,10 +52,11 @@ body {
 /* CSS de la navbar*/
 .screen .nav{
     /*Ne pas modifier !!!*/
-    position: absolute;
-    top: 43px;
-    left: 7%;
-    width: 86.1%;
+    position: fixed;
+    top: 0px;
+    left: 0
+        0%;
+    width: 100%;
     border-bottom-style: solid;
     border-bottom-color: #CC641F;
 ;
@@ -65,6 +66,8 @@ body {
     text-align: center;
     color: white;
     background-color: #2e62c2;
+    
+    
     
     
 }
@@ -168,7 +171,7 @@ h3{
 /*Version 2*/
 
 #screen2{
-     padding-top: 90px;
+     padding-top: 50px;
 }
 
 .titre{
@@ -177,20 +180,20 @@ h3{
 
 /*CSS de la navbar--------------------------------*/
     .all2 ul {
-        padding: 0px;
-        overflow-x: scroll;
-        background-color: #2e62c2;
-        position: absolute;
-        top: 85px;
-        width: 274px;
-        border-top-style: solid;
-        border-top-color: #D76147;
-        display: flex;
-        white-space: nowrap;
-        color: white;
-        text-align: right;
-        font-family: fantasy;
-        background-color: transparent;
+    padding: 0px;
+    overflow-x: scroll;
+    background-color: #2e62c2;
+    position: absolute;
+    top: 42px;
+    width: 100%;
+    border-top-style: solid;
+    border-top-color: #D76147;
+    display: flex;
+    white-space: nowrap;
+    color: white;
+    text-align: right;
+    font-family: fantasy;
+    background-color: transparent;
     }
 
     .all2>ul li {
@@ -272,9 +275,9 @@ h3{
 }
 
 .iframe{
-    height: 473px;
-    width: 275px;
+    height: 100vh;
+    width: 100%;
     position: absolute;
-    top: 99px;
+    top: 57px;
     border: 0px;
 }
