@@ -54,22 +54,16 @@ body {
     /*Ne pas modifier !!!*/
     position: fixed;
     top: 0px;
-    left: 0
-        0%;
+    left: 0;
     width: 100%;
     border-bottom-style: solid;
     border-bottom-color: #CC641F;
-;
     
     /**/
     font-size: 85%;
     text-align: center;
     color: white;
-    background-color: #2e62c2;
-    
-    
-    
-    
+    background-color: #2e62c2; 
 }
 
 
@@ -280,4 +274,53 @@ h3{
     position: absolute;
     top: 57px;
     border: 0px;
+}
+
+.output { 
+    width: 500px;
+    margin: auto;
+}
+
+.article {
+    padding: 5px;
+    clear: both;
+}
+
+h2 {
+    font-size: 20px
+}
+
+.article>.titreA{
+    width: 70%;
+    float: left;
+    margin: 0px;
+}
+
+.article>.texteA{
+    font-size: 0px;
+    width: 30%;
+    float: left;
+    margin: 0px;
+}
+
+.article1{
+    margin: 10px;
+    position: relative;
+}
+
+.article1 img {
+    width: 100%;
+}
+
+.article1>p {
+    font-size: 0px;
+}
+
+.article1>h2 {
+    color: white;
+    background-color: blue;
+    width: 80%;
+    position: absolute;
+    bottom: 5px;
+    left: 5px;
 }
