@@ -1,12 +1,14 @@
 * {
-    -webkit-tap-highlight-color: rgba(0,0,0,0); /* make transparent link selection, adjust last value opacity 0 to 1.0 */
     box-sizing: border-box;
+    -webkit-tap-highlight-color: rgba(0,0,0,0); /* make transparent link selection, adjust last value opacity 0 to 1.0 */
 }
+
+::-webkit-scrollbar { width: 0px; height: 0px; }
 
 body {
     -webkit-touch-callout: none;                /* prevent callout to copy image, etc when tap to hold */
     -webkit-text-size-adjust: none;             /* prevent webkit from resizing text to fit */
-    -webkit-user-select: text;                  /* prevent copy paste, to allow, change 'none' to 'text' */
+    -webkit-user-select: none;                  /* prevent copy paste, to allow, change 'none' to 'text' */
     font-family: system-ui, -apple-system, -apple-system-font, 'Segoe UI', 'Roboto', sans-serif;
     font-size:12px;
     height:100vh;
@@ -15,312 +17,133 @@ body {
     /* Padding to avoid the "unsafe" areas behind notches in the screen */
     padding: env(safe-area-inset-top, 0px) env(safe-area-inset-right, 0px) env(safe-area-inset-bottom, 0px) env(safe-area-inset-right, 0px);
     width:100%;
-    
-    /**/
-    background-image: url("../img/background.jpg");
-    margin: 0px; 
-    max-height: 100vh; 
-    overflow: hidden;
-}
-.half{
-    width: 100%;
-}
-
-.frame {
-    width: 320px;
-    height: 600px;
-    margin: auto ;
-    margin-top: 50px;
-    background-color: white;
-    border: thin #c0c0c0 solid;
-    border-radius: 15px;
-    position: relative;
-}
-
-.screen {
-    width: 100%;
-    height: 100%;
-    margin: 40px auto;
-    padding-top: 25px;
-    border: 3px #c0c0c0 solid;
-    border-radius: 5px;
-    overflow-y: scroll;
     display: grid;
+    grid-template-rows: 57px 35px 1fr;
 }
 
-
-/* CSS de la navbar*/
-.screen .nav{
-    /*Ne pas modifier !!!*/
-    position: fixed;
-    top: 0px;
-    left: 0;
-    width: 100%;
-    border-bottom-style: solid;
-    border-bottom-color: #CC641F;
-    
-    /**/
-    font-size: 85%;
-    text-align: center;
+.titlebar {
     color: white;
-    background-color: #2e62c2; 
-}
-
-
-.footerButton {
-    width: 50%;
-    float: left;
-    padding: 3px;
-}
-
-.footerButton>img {
-    width: 23px;
-}
-
-.footerButton>p {
-    margin: 0px;
-    padding: 0px;
-    font-size: 9px;
-}
-/*Zone d'affichage des articles*/
-output {
-    padding-bottom: 100px;
-}
-
-
-/*css des articles*/
-.article{
-    border: thin #c0c0c0 solid;
-}
-
-
-
-h3{ 
-    
-    text-align: center;
-    color: white;   
-    background: #CC641F;
-    
-    
-}
-
-.zero{
-    padding-left: 2%;
-    list-style-type: none;
-    font-family: sans-serif;
-    font-weight: bold;
-    font-size: 140%;
-    line-height: 100%;    
-    
-}
-
-.un{
-    list-style-position: inside;
-    list-style-image: url('../img/puce.png');
-    text-align: left;
-    font-family: sans-serif;
-    font-weight: bold;
-    padding-left: 3%;
-    font-size: 140%;
-    line-height: 200%;
-    
- }
-
-.deux{
-      list-style-type: none;
-      font-family: sans-serif;
-      font-weight: bold;
-      font-size: 140%;
-      line-height: 140%;
-      padding-left: 1%;
-      padding-right: 1%;
-    
-  }
-
-.trois{
-    list-style-type: none;
-    padding-left: 2%;
-    font-family: sans-serif;
-    font-weight: bold;
-    font-size: 120%;
-    
-}
-/*séparateur*/
-#hr1, #hr2, #hr3, #hr4, #hr5, #hr6, #hr7{
-    border: 0;
-    height: 2px;
-    background-image: linear-gradient(to right, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0));
-}
-
-#hr8, #hr9, #hr10{
-    border-top: 1px solid black;
-}
-
-
-/*css du titre des articles*/
-.titreA{}
-/*css du texte des articles*/
-.texteA{}
-
-/*Version 2*/
-
-#screen2{
-     padding-top: 50px;
-}
-
-.titre{
-   /*vide pour le moment*/ 
-}
-
-/*CSS de la navbar--------------------------------*/
-    .all2 ul {
-    padding: 0px;
-    overflow-x: scroll;
-    background-color: #2e62c2;
-    position: absolute;
-    top: 42px;
-    width: 100%;
-    border-top-style: solid;
-    border-top-color: #D76147;
+    background: #2e62c2;
+    border-bottom: 3px solid #cc641f;
     display: flex;
-    white-space: nowrap;
-    color: white;
-    text-align: right;
-    font-family: fantasy;
-    background-color: transparent;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 15px;
+    padding-right: 20px;
+}
+    .button-menu {
+        width: 30px;
     }
 
-    .all2>ul li {
-        display: inline-block;
-        margin: 0px;
-        padding: 10px;
-        background-color:#2e62c2;
+    .titlebar h1 {
+        margin: 0;
     }
 
-/*--------------------------------------------------*/
+    .button-direct {
+        background: #cc641f;
+        padding: 5px 10px;
+        border-radius: 5px;
+    }
 
-
-.icones { width: 30px; }
-
-#cog {
-    position: absolute;
-    right: 19px;
-    top: 13px
+.navbar {
+    background: #2e62c2;
+    overflow-x: scroll;
 }
+    .all2 ul {
+        color: #fff;
+        display: grid;
+        grid-template-columns: minmax(100px, 1fr) minmax(100px, 1fr) minmax(100px, 1fr) minmax(100px, 1fr) minmax(100px, 1fr) minmax(100px, 1fr) minmax(100px, 1fr) minmax(100px, 1fr);
+        height: 35px;
+        margin: 0;
+        padding: 0;
+    }
+        .all2 ul li {
+            list-style-type: none;
+            text-align: center;
+            padding: 9px;
+            font-family: fantasy;
+        }
 
-.right{
-    position: absolute;
-    left: 19px;
-    top: 13px
+output {
+    overflow-y : scroll;
 }
+    .article {
+        padding: 10px 0px 10px 10px;
+        display: grid;
+        grid-template-columns: 1fr auto;
+        border-bottom: 1px solid #dedede;
+    }
+        .article h2 {
+            margin: 0px;
+        }
+        .article img {
+            margin: 0 10px;
+            height: 70px;
+        }
 
+        .article p {
+            font-size: 0px;
+        }
 
-::-webkit-scrollbar{ width: 0px; }
-
-.menuV2 {
-    width: 277px;
-    height: 524px;
-    top: 43px;
-    position: absolute;
-    z-index: 100;
-    left: 22px
-}
-
-.menuV2 .side {
-    width: 75%;
-    height: 100%;
-    background-color: #e0e0e0;
-    position: absolute;
-}
-
-.menuV2 .bar {
-    position: absolute;
-    color: white;
+.menu {
     width: 100%;
-    height: 57px;
-    
-    
-    background: url('../img/logonew.jpg');
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: 189px 40px;
-    background-color:#2e62c2;
-    border-bottom-style: solid;
-    border-bottom-color: #D76147;
-    
-}
-
-.bar .title {
-    text-align: center;
-    padding-top: 15px;
-}
-
-.content {
-    position:absolute;
-    top: 80px;
-}
-
-.opaque {
-    position: absolute;
-    right: 0px;
-    width: 25%;
-    height: 100%;
-    background-color: #000000b1;
-}
-
-.iframe{
     height: 100vh;
-    width: 100%;
     position: absolute;
-    top: 57px;
-    border: 0px;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    display: grid;
+    grid-template-rows: 57px auto 1fr;
 }
+    .close {
+        background: #2e62c2;
+        border-bottom: 3px solid #cc641f;
+        width: 50px;
+        display: grid;
+        align-items: center;
+        padding: 10px;   
+        padding-left: 15px;     
+    }
 
-.output { 
-    width: 500px;
-    margin: auto;
-}
+    .content{
+        min-height: 100px;
+        display: grid;
+        grid-template-columns: auto 1fr;
+    }
+        .liste{
+            background: #fff;
+            width: 500px;
+        }
 
-.article {
-    padding: 5px;
-    clear: both;
-}
+        .opaque{
+            background: #000000ba;
+        }
 
-h2 {
-    font-size: 20px
-}
-
-.article>.titreA{
-    width: 70%;
-    float: left;
-    margin: 0px;
-}
-
-.article>.texteA{
-    font-size: 0px;
-    width: 30%;
-    float: left;
-    margin: 0px;
-}
-
-.article1{
-    margin: 10px;
-    position: relative;
-}
-
-.article1 img {
+.page-article {
     width: 100%;
-}
-
-.article1>p {
-    font-size: 0px;
-}
-
-.article1>h2 {
-    color: white;
-    background-color: blue;
-    width: 80%;
+    height: 100vh;
     position: absolute;
-    bottom: 5px;
-    left: 5px;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    display: grid;
+    grid-template-rows: 57px 1fr;
 }
+    .page-bar{
+        background: #2e62c2;
+        border-bottom: 3px solid #cc641f;
+        width: 100px;
+        display: grid;
+        align-items: center;
+        padding: 10px;   
+        padding-left: 15px;   
+    }
+
+    iframe{
+        overflow-y: scroll;
+        background: #fff;
+        width: 100%;
+        height: 100%;
+        border: 0px;
+    }

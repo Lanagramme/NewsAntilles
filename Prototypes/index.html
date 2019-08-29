@@ -1,55 +1,47 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <meta charset="UTF-8">
-    <meta name="format-detection" content="telephone=no">
-    <meta name="msapplication-tap-highlight" content="no">
-    <meta http-equiv="Content-Security-Policy" script-src='unsafe-inline';>
-    <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
-    <title>NewsAntilles</title>
-    <link rel="stylesheet" type="text/css" href="css/index.css">
-    <script defer type="text/javascript" src="js/jquery-3.4.1.js"></script>
-    <script defer type="text/javascript" src="js/index.js"></script>
-</head>
-<body>
-            <div class="screen" id="screen2">     
-<!---  NAVBAR  --->
-            <div class="menuV2 menu all">
-                <div class="side">
-                    <div class="bar">
-                    </div>
-                    <div class="content">
-                        <ul>
-                            <li>Dernières infos</li>
-                            <li>En Direct</li>
-                            <li>Paramètres</li>
-                            </ul>
-                    </div>
-                </div>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="format-detection" content="telephone=no">
+        <meta name="msapplication-tap-highlight" content="no">
+        <meta http-equiv="Content-Security-Policy" script-src='unsafe-inline';>
+        <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
+        <title>NewsAntilles</title>
+        <link rel="stylesheet" type="text/css" href="css/index.css">
+        <script defer type="text/javascript" src="js/jquery-3.4.1.js"></script>
+        <script defer type="text/javascript" src="js/index.js"></script>
+    </head>
+    <body>
+        <div class="menu all">
+            <div onclick='affAccueil()' class="close">
+                <img src="img/back.png" alt="retour" class="button-menu">
+            </div>
+            <div class="content">
+                <div class="liste"></div>
                 <div onclick='affAccueil()' class="opaque"></div>
-                     
             </div>
-                <div class="nav" id="nav2">
-                    <img onclick="affMenu()" class="right icones" src="img/icons8-menu-24.png" alt="">
-                    <h1 class="titre" id="titre2">NewsAntilles</h1>
-                </div>
-                <div class="all2">
-                    <ul>
-                            <li class='under' id="frist" onclick="rubrique('international')">En  bref</li>
-                            <li class='under' onclick="rubrique('societe')">Société</li>
-                            <li class='under' onclick="rubrique('politique')">Politique</li>
-                            <li class='under' onclick="rubrique('international')">Economie</li>
-                            <li class='under' onclick="rubrique('culture')">Culture</li>
-                            <li class='under' onclick="rubrique('culture')">Sport</li>
-                            <li class='under' onclick="rubrique('planete')">Photos</li>
-                            <li class='under' onclick="rubrique('politique')">Le Direct</li>
-                    </ul>
-                </div>
-<!---    MENU    --->
-<!---    FLUX    --->
-            <output></output>
-<!---  FOOTER  --->
-            </div>
+            <div onclick='affAccueil()' class="opaque"></div>
+        </div>
 
-</body>
+        <div class="titlebar">
+            <img onclick="affMenu()" class="button-menu" src="img/menu.png" alt="">
+            <h1>NewsAntilles</h1>
+            <div class="button-direct">DIRECT</div>
+        </div>
+        <div class="navbar">
+            <div class="all2">
+                <ul>
+                    <li class='under' id="frist" onclick="rubrique('international')">En  bref</li>
+                    <li class='under' onclick="rubrique('societe')">Société</li>
+                    <li class='under' onclick="rubrique('politique')">Politique</li>
+                    <li class='under' onclick="rubrique('international')">Economie</li>
+                    <li class='under' onclick="rubrique('culture')">Culture</li>
+                    <li class='under' onclick="rubrique('culture')">Sport</li>
+                    <li class='under' onclick="rubrique('planete')">Photos</li>
+                    <li class='under' onclick="rubrique('politique')">Le Direct</li>
+                </ul>
+            </div>
+        </div>
+        <output></output>
+    </body>
 </html>
