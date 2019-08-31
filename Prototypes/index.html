@@ -16,32 +16,68 @@
             <div onclick='affAccueil()' class="close">
                 <img src="img/back.png" alt="retour" class="button-menu">
             </div>
-            <div class="content">
-                <div class="liste"></div>
-                <div onclick='affAccueil()' class="opaque"></div>
+            <div class="side">
+            <div class="headtitle">  
+              <img src="img/logonew.jpg" class="img1"/> 
             </div>
+            <div class="menucontent">
+                <h3>Menu</h3>
+                </div>
+            <div class="rubriques">
+                <h4>Rubriques</h4>
+            </div>
+            <div class="contents">
+                 <ul class="un">
+                          <hr id="hr1">
+                          <li onclick="rubrique('societe')">SOCIETE</li>
+                          <hr id="hr2">
+                          <li onclick="rubrique('politique')">POLITIQUE</li>
+                          <hr id="hr3">
+                          <li onclick="rubrique('international')">ECONOMIE</li>
+                          <hr id="hr4">
+                          <li onclick="rubrique('culture')">CULTURE</li>
+                          <hr id="hr5">
+                          <li onclick="rubrique('planete')">SPORT</li>
+                          <hr id="hr6">
+                          <li onclick="rubrique('politique')">PHOTOS</li>
+                          <hr id="hr7">
+                         </ul>
+                        <div class="autres">
+                        <h4>Autres</h4>
+                        </div>
+                        <ul class="deux">
+                            <li onclick="param" class="parametres">Paramètres</li>
+                            <br/>
+                            <li onclick="ver" class="version">Version</li>
+                        </ul>
+                       </div>
+                    </div>
+                    <div onclick='affAccueil()' class="opaque"></div>
             <div onclick='affAccueil()' class="opaque"></div>
+          
         </div>
+       
 
         <div class="titlebar">
             <img onclick="affMenu()" class="button-menu" src="img/menu.png" alt="">
-            <h1>NewsAntilles</h1>
-            <div class="button-direct">DIRECT</div>
+            <h1>Dernières infos</h1>
+            <div class="button-direct">LE DIRECT</div>
         </div>
         <div class="navbar">
             <div class="all2">
                 <ul>
-                    <li class='under' id="frist" onclick="rubrique('international')">En  bref</li>
-                    <li class='under' onclick="rubrique('societe')">Société</li>
-                    <li class='under' onclick="rubrique('politique')">Politique</li>
-                    <li class='under' onclick="rubrique('international')">Economie</li>
-                    <li class='under' onclick="rubrique('culture')">Culture</li>
-                    <li class='under' onclick="rubrique('culture')">Sport</li>
-                    <li class='under' onclick="rubrique('planete')">Photos</li>
-                    <li class='under' onclick="rubrique('politique')">Le Direct</li>
-                </ul>
+                    <li class='under' id="frist" onclick="rubrique('international')">EN BREF</li>
+                    <li class='under' onclick="rubrique('societe')">SOCIETE</li>
+                    <li class='under' onclick="rubrique('politique')">POLITIQUE</li>
+                    <li class='under' onclick="rubrique('international')">ECONOMIE</li>
+                    <li class='under' onclick="rubrique('culture')">CULTURE</li>
+                    <li class='under' onclick="rubrique('culture')">SPORT</li>
+                    <li class='under' onclick="rubrique('planete')">PHOTOS</li>
+                 </ul>
             </div>
         </div>
+         
         <output></output>
-    </body>
+    
+ </body>
 </html>
