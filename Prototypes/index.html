@@ -12,11 +12,15 @@
         <script defer type="text/javascript" src="js/index.js"></script>
     </head>
     <body>
+           
+    <!---PAGE D'ACCUEIL--->
             <div class="splash">
                 <div class="splashlogo">
                     <img class="logo" src="img/logonew2.jpg" alt="">
                 </div>
             </div>
+            
+    <!---ACCUEIL/SIDEBAR/MENU--->
         <div class="menu all" style="display: none">
             <div onclick='affAccueil()' class="close">
                 <img src="img/back.png" alt="retour" class="button-menu">
@@ -47,33 +51,44 @@
                         <li onclick="rubrique('planete')">PHOTOS</li>
                                 <hr id="hr7">
                     </ul>
-                    <div class="autres">
+                    
+                     <!---AUTRES--->
+                   
+                        <div class="autres">
                         <h4>Autres</h4>
                     </div>
                     <ul class="deux">
                         <li class="parametres">Paramètres</li>
-                            <!---PARAMETRES--->
+                           
                             <div id="param" style="display: none">
-                                <h5>Autres</h5>
-
-                                <ul class="zero">
-                                    <li>Alertes Info</li>
-                                </ul>
-                            
-                                <h5>A PROPOS</h5>
-                                <ul class="deux">
-                                    <li>Nous contacter</li>
-                                    <hr id="hr8">
-                                    <li>Mentions légales</li>
+                                    
+                                  <hr id="hr8">
+                                  <li>Alertes Info</li>
+                                   <div class="container">
+                                    <div class="toggle-btn" onclick="toggle('active')">                 
+                                        <div class="inner-circle"></div>
+                                        </div>
+                                    </div>
                                     <hr id="hr9">
-                                    <li>Notez l'application</li>
+                                    <li>Affichage des articles</li>
                                     <hr id="hr10">
+                                 </div>
+                               <br/>  
+                              <li class="propos">A propos</li>
+                                <div id="contact" style="display: none">
+                                    <hr id="hr10">
+                                    <li>Nous contacter</li>
+                                    <hr id="hr11">
+                                    <li>Notez l'application</li>
+                                    <hr id="hr12">
                                     <li>Recommander l'application</li>
-                                </ul>
-                                <h5>INFORMATION COMPLEMENTAIRE</h5>
-                            </div>
+                                    <hr id="hr13">
+                                </div>
                         <br/>
-                        <li onclick="ver" class="version">Version</li>
+                        <li class="vers">Version</li>
+                             <div id="build" style="display: none">
+                                 <h5>build 1.0</h5>
+                             </div>
                     </ul>
                 </div>
             </div>

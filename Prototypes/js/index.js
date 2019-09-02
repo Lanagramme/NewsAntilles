@@ -4,7 +4,12 @@ $(".splash").delay( 1000 ).fadeOut( 400 );
 $('.parametres').click(function() {
    $('#param').toggle();
 });
-
+$('.propos').click(function() {
+   $('#contact').toggle();
+});
+$('.vers').click(function() {
+   $('#build').toggle();
+});
 function affMenu(){
    $(".all" ).hide();
    $(".menu").show();
