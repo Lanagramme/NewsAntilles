@@ -1,5 +1,9 @@
-rubrique('international');
+rubrique('societe');
 $('#frist').css('border-bottom', '2px solid #db5e11');
+$(".splash").delay( 1000 ).fadeOut( 400 );
+$('.parametres').click(function() {
+   $('#param').toggle();
+});
 
 function affMenu(){
    $(".all" ).hide();
@@ -13,22 +17,30 @@ function affAccueil(){
 }
 
 function rubrique(a){
-   affAccueil();  
-    try {
-       if (event.currentTarget.classList.contains('under'))
-       {event.currentTarget.style.borderBottom = '2px solid #db5e11'; }
-   } catch { }
+   affAccueil();
+   under = document.getElementsByClassName('under');
+   for (const item of under) {
+      if (item.classList.contains(a))
+      {item.style.borderBottom = '2px solid #db5e11';}
+   }
+
 
    b=0;
    $('output').html('');
+   spin = '<div class="lds-ellipsis" style="margin-left: 45vw; margin-top: 40vh;"><div></div><div></div><div></div><div></div></div>';
+   $('output').append(spin);
    fetch("https://www.bfmtv.com/rss/" + a + "/").then((res) => {
    res.text().then((xmlTxt) => {
       var domParser = new DOMParser();
       doc = domParser.parseFromString(xmlTxt, 'text/xml');
+      try {
+         $('.lds-ellipsis').hide();
+      } catch (error) {
+         
+      }
          doc.querySelectorAll('item').forEach((item) => {
       
             tit = item.querySelector('link').textContent;
-			
 			
             di = document.createElement('div');
             di.className = "article section" + b;
