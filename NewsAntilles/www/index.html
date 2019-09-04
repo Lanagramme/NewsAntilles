@@ -1,19 +1,124 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <meta charset="UTF-8">
         <meta name="format-detection" content="telephone=no">
         <meta name="msapplication-tap-highlight" content="no">
-        <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
-        <link rel="stylesheet" type="text/css" href="css/index.css">
         <meta http-equiv="Content-Security-Policy" script-src='unsafe-inline';>
+        <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
         <title>NewsAntilles</title>
+        <link rel="stylesheet" type="text/css" href="css/index.css">
+        <script defer type="text/javascript" src="js/jquery-3.4.1.js"></script>
+        <script defer type="text/javascript" src="js/index.js"></script>
     </head>
     <body>
-    <h1>BFMTV</h1>
-    
-    <output></output>
+           
+    <!---PAGE D'ACCUEIL--->
+            <div class="splash">
+                <div class="splashlogo">
+                    <img class="logo" src="img/logonew2.jpg" alt="">
+                </div>
+            </div>
+            
+    <!---ACCUEIL/SIDEBAR/MENU--->
+        <div class="menu all" style="display: none">
+            <div onclick='affAccueil()' class="close">
+                <img src="img/back.png" alt="retour" class="button-menu">
+            </div>
+            <div class="side">
+                <div class="headtitle">  
+                <img src="img/logonew.jpg" class="img1"/> 
+                </div>
+                <div class="menucontent">
+                    <h3>Menu</h3>
+                    </div>
+                <div class="rubriques">
+                    <h4>Rubriques</h4>
+                </div>
+                <div class="contents">
+                    <ul class="un">
+                                <hr id="hr1">
+                        <li onclick="rubrique('societe')">SOCIETE</li>
+                                <hr id="hr2">
+                        <li onclick="rubrique('politique')">POLITIQUE</li>
+                                <hr id="hr3">
+                        <li onclick="rubrique('international')">ECONOMIE</li>
+                                <hr id="hr4">
+                        <li onclick="rubrique('culture')">CULTURE</li>
+                                <hr id="hr5">
+                        <li onclick="rubrique('logiciel')">SPORT</li>
+                                <hr id="hr6">
+                        <li onclick="rubrique('planete')">PHOTOS</li>
+                                <hr id="hr7">
+                    </ul>
+                    
+                     <!---AUTRES--->
+                   
+                        <div class="autres">
+                        <h4>Autres</h4>
+                    </div>
+                    <ul class="deux">
+                        <li class="parametres">Paramètres</li>
+                           
+                            <div id="param" style="display: none">
+                                    
+                                  <hr id="hr8">
+                                  <li>Alertes Info</li>
+                                   <div class="container">
+                                    <div class="toggle-btn" onclick="toggle('active')">                 
+                                        <div class="inner-circle"></div>
+                                        </div>
+                                    </div>
+                                    <hr id="hr9">
+                                    <li>Affichage des articles</li>
+                                    <hr id="hr10">
+                                 </div>
+                               <br/>  
+                              <li class="propos">A propos</li>
+                                <div id="contact" style="display: none">
+                                    <hr id="hr10">
+                                    <li>Nous contacter</li>
+                                    <hr id="hr11">
+                                    <li>Notez l'application</li>
+                                    <hr id="hr12">
+                                    <li>Recommander l'application</li>
+                                    <hr id="hr13">
+                                </div>
+                        <br/>
+                        <li class="vers">Version</li>
+                             <div id="build" style="display: none">
+                                 <h5>build 1.0</h5>
+                             </div>
+                    </ul>
+                </div>
+            </div>
+            <div onclick='affAccueil()' class="opaque"></div>
+            <div onclick='affAccueil()' class="opaque"></div>
+          
+        </div>
        
-    <script type="text/javascript" src="js/index.js"></script>
+
+        <div class="titlebar">
+            <img onclick="affMenu()" class="button-menu" src="img/menu.png" alt="">
+            <h1>Dernières infos</h1>
+            <div class="button-direct">LE DIRECT</div>
+        </div>
+        <div class="navbar">
+            <div class="all2">
+                <ul>
+                    <li class='under societe' id="frist" onclick="rubrique('societe')">EN BREF</li>
+                    <li class='under societe'   onclick="rubrique('societe')">SOCIETE</li>
+                    <li class='under politique' onclick="rubrique('politique')">POLITIQUE</li>
+                    <li class='under international' onclick="rubrique('international')">ECONOMIE</li>
+                    <li class='under culture'  onclick="rubrique('culture')">CULTURE</li>
+                    <li class='under logiciel' onclick="rubrique('logiciel')">SPORT</li>
+                    <li class='under planete'  onclick="rubrique('planete')">PHOTOS</li>
+                 </ul>
+            </div>
+        </div>
+         <output>
+                
+         </output>
     
-    </body>
+ </body>
 </html>
