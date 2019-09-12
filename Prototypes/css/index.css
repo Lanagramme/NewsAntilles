@@ -55,7 +55,9 @@ body {
     position: absolute;
     background-color: #FDFEFE;
     overflow-y: scroll;
-    
+    z-index: 1000000;
+    margin-left: -100%;
+    transition-duration: .3s;
     }
 
 .headtitle, .img1 {
@@ -319,8 +321,6 @@ output {
     top: 0;
     left: 0;
     z-index: 100;
-    display: grid;
-    grid-template-rows: 57px auto 1fr;
 }
     .close {
         background: #2e62c2;
@@ -343,7 +343,12 @@ output {
         }
 
         .opaque{
-            background: #000000ba;
+            background: #000000ba;    
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            top: 55px;
         }
 
 .page-article {

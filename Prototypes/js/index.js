@@ -12,11 +12,15 @@ $('.vers').click(function() {
 });
 function affMenu(){
    $(".all" ).hide();
-   $(".menu").show();
-    $('.togglable').css('display', 'none');
+   $(".opaque").toggle();
+   $('.togglable').css('display', 'none');
+   $('.side').css('margin-left', '0'); 
+   
 }
 
 function affAccueil(){
+   $('.side').css('margin-left', '-100%'); 
+   $(".opaque").fadeOut( 400 );
    $('li'    ).css("border-bottom", "0px solid black");
    $(".all"  ).hide();
    $("output").show();
