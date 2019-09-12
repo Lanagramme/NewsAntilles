@@ -262,7 +262,6 @@ li.propos{
     }
 
 .button-direct {
-        background: #cc641f;
         padding: 5px 10px;
         border-radius: 5px;
     }
@@ -363,7 +362,7 @@ output {
     .page-bar{
         background: #2e62c2;
         border-bottom: 3px solid #cc641f;
-        width: 100px;
+        width: 60px;
         display: grid;
         align-items: center;
         padding: 10px;   
