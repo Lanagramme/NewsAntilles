@@ -19,8 +19,24 @@ body {
     width:100%;
     display: grid;
     grid-template-rows: 57px 35px 1fr;
- 
+    
+    
+ }
+
+/*Pour les écrans de minimum 320 de largeur*/
+@media screen and (max-width: 320px) {
+    .side{
+        width: 80%;
+    }
+}/*Pour les écrans de minimum 321 de largeur*/
+@media screen and (min-width: 321px) {
+    .side{
+        width: 310px;
+    }
 }
+
+
+
 
 .splash{
     position: absolute;
@@ -50,7 +66,6 @@ body {
 
 .side{
     top: 0px; bottom: 0; left: 0;
-    width: 310px;
     max-height: 100vh;
     position: absolute;
     background-color: #FDFEFE;
