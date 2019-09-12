@@ -202,8 +202,7 @@ li.parametres{
     font-size: 15px;
     padding-left: 26px;
     font-family: inherit;
-    
-    
+    transition-duration: 1s;
 }
 
 li.vers{
