@@ -20,7 +20,7 @@ function affMenu(){
 
 function affAccueil(){
    $('.side').css('margin-left', '-100%'); 
-   $(".opaque").fadeOut( 400 );
+   $(".opaque").fadeOut( 200 );
    $('li'    ).css("border-bottom", "0px solid black");
    $(".all"  ).hide();
    $("output").show();
