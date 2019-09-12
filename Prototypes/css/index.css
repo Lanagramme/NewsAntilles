@@ -145,12 +145,6 @@ h4{
 
 
 /*bouton notification*/
-.container{
-    position:relative;
-    padding-left:76%;
-    margin-top:-21px;
-    margin-bottom: -2px;
-     
           
 }
 .toggle-btn{
@@ -227,6 +221,13 @@ li.parametres{
     padding-left: 26px;
     font-family: inherit;
     transition-duration: 1s;
+}
+
+.ai{
+    padding-right: 5px;
+    display: grid;
+    grid-template-columns: 1fr auto;
+        
 }
 
 li.vers{
