@@ -13,6 +13,7 @@ $('.vers').click(function() {
 function affMenu(){
    $(".all" ).hide();
    $(".menu").show();
+    $('.togglable').css('display', 'none');
 }
 
 function affAccueil(){
