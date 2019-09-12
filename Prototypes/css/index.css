@@ -75,6 +75,14 @@ body {
     background-color: #2e62c2;
     
     }
+
+h2{
+    font-size: 13px;
+    display: flex;
+    align-items: center;
+}
+    
+}
     
 
 h3{
