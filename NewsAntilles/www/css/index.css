@@ -49,13 +49,15 @@ body {
 }
 
 .side{
-    top: 0px;
+    top: 0px; bottom: 0; left: 0;
     width: 310px;
     max-height: 100vh;
     position: absolute;
     background-color: #FDFEFE;
     overflow-y: scroll;
-    
+    z-index: 1000000;
+    margin-left: -100%;
+    transition-duration: .3s;
     }
 
 .headtitle, .img1 {
@@ -70,8 +72,8 @@ body {
 
 .menucontent {
     margin-top: 55px;
-    height: 32px;
-    width: 310px;
+    height: 37px;
+    width: 100%;
     background-color: #2e62c2;
     
     }
@@ -97,15 +99,15 @@ h3{
 .rubriques{
     margin-top: -16px;
     height: 26px;
-    width: 310px;
     background-color:#cc641f;
     
     }
 
 h4{
     line-height: 2em;
-    color:white;
-    text-align: center;
+    color: white;
+    width: fit-content;
+    margin: auto;
     
     }
 
@@ -187,7 +189,6 @@ h4{
 .autres {
     margin-top: -4px;
     height: 26px;
-    width: 310px;
     background-color:#cc641f;
     
    }
@@ -319,8 +320,6 @@ output {
     top: 0;
     left: 0;
     z-index: 100;
-    display: grid;
-    grid-template-rows: 57px auto 1fr;
 }
     .close {
         background: #2e62c2;
@@ -343,7 +342,12 @@ output {
         }
 
         .opaque{
-            background: #000000ba;
+            background: #000000ba;    
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            top: 55px;
         }
 
 .page-article {
