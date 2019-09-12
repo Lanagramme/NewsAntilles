@@ -2,13 +2,13 @@ rubrique('societe');
 $('#frist').css('border-bottom', '2px solid #db5e11');
 $(".splash").delay( 1000 ).fadeOut( 400 );
 $('.parametres').click(function() {
-   $('#param').toggle();
+   $('#param').toggle('slow');
 });
 $('.propos').click(function() {
-   $('#contact').toggle();
+   $('#contact').toggle('slow');
 });
 $('.vers').click(function() {
-   $('#build').toggle();
+   $('#build').toggle('slow');
 });
 function affMenu(){
    $(".all" ).hide();

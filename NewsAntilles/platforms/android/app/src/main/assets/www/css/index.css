@@ -75,6 +75,14 @@ body {
     background-color: #2e62c2;
     
     }
+
+h2{
+    font-size: 13px;
+    display: flex;
+    align-items: center;
+}
+    
+}
     
 
 h3{
@@ -122,25 +130,28 @@ h4{
 /*bouton notification*/
 .container{
     position:relative;
-    padding-left:75%;
-    margin-top:-22px;
+    padding-left:76%;
+    margin-top:-21px;
     margin-bottom: -2px;
      
           
 }
 .toggle-btn{
-    width: 60px;
-    height:30px;
+    width: 50px;
+    height:25px;
     background:gray;
     border-radius: 30px;
     padding: 2px;
+    transition: all 300ms ease-in-out;
 }
 
 .toggle-btn >.inner-circle {
-    width: 26px;
-    height: 26px;
+    position: relative;
+    width: 22px;
+    height: 22px;
     background:#fff;
     border-radius: 50%;
+    transition: all 300ms ease-in-out;
 }
 
 .toggle-btn.active{
@@ -148,8 +159,9 @@ h4{
    }
 
 .toggle-btn.active > .inner-circle {
-    margin-left: 30px;
+    margin-left: 24px;
 }
+
 
 
 
@@ -198,8 +210,7 @@ li.parametres{
     font-size: 15px;
     padding-left: 26px;
     font-family: inherit;
-    
-    
+    transition-duration: 1s;
 }
 
 li.vers{
