@@ -99,15 +99,15 @@ h3{
 .rubriques{
     margin-top: -16px;
     height: 26px;
-    width: 310px;
     background-color:#cc641f;
     
     }
 
 h4{
     line-height: 2em;
-    color:white;
-    text-align: center;
+    color: white;
+    width: fit-content;
+    margin: auto;
     
     }
 
@@ -189,7 +189,6 @@ h4{
 .autres {
     margin-top: -4px;
     height: 26px;
-    width: 310px;
     background-color:#cc641f;
     
    }
