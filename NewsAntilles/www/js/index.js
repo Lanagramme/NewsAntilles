@@ -39,15 +39,18 @@ function rubrique(a){
    $('output').html('');
    spin = '<div class="lds-ellipsis" style="margin-left: 45vw; margin-top: 40vh;"><div></div><div></div><div></div><div></div></div>';
    $('output').append(spin);
-   fetch("https://www.bfmtv.com/rss/" + a + "/").then((res) => {
-   res.text().then((xmlTxt) => {
-      var domParser = new DOMParser();
-      doc = domParser.parseFromString(xmlTxt, 'text/xml');
-      try {
-         $('.lds-ellipsis').hide();
-      } catch (error) {
-         
-      }
+    
+    
+   var proxyUrl = 'https://cors-anywhere.herokuapp.com/',
+    targetUrl = "http://www.newsantilles.com/index.php/" + a + "?format=feed&type=rss/";
+	fetch(proxyUrl + targetUrl).then((res) => {
+    res.text().then((xmlTxt) => {
+        var domParser = new DOMParser();
+        doc = domParser.parseFromString(xmlTxt, 'text/xml');
+        try {
+            $('.lds-ellipsis').hide();
+        } catch (error) { }
+        
          doc.querySelectorAll('item').forEach((item) => {
       
             tit = item.querySelector('link').textContent;
@@ -67,12 +70,46 @@ function rubrique(a){
             p = document.createElement('p');
             p.innerHTML = item.querySelector('description').textContent;
             p.className = "texteA";
-      
+             
+             
             $('.section' + b).append(p);
             b++;
+             
+             $('.texteA p span').each(function(index) {
+                 $('this').css('font-size', '0px');
+                 
+             })
+             
          });
+        
+             $('.texteA p:not(.texteA p:first-child)').each(function (index){
+                 $(this).css('height', '0px')
+                 $(this).css('margin', '0px')
+             })
+        
+             $('.texteA p span').each(function (index){
+                 $('.article img').css('height','70px')
+                 $('.article img').css('width','105px')
+                 $('.article img').css('background','#c7c7c7')
+                 $('.article img').css('margin','0px 10px')
+             })
+             $('.texteA').each(function (index){
+                 $(this).css('margin', '0px')
+             })
+             $('.texteA p').each(function (index){
+                 $(this).css('margin', '0px')
+             })
+             $('.texteA p span').each(function (index){
+                 $(this).css('font-size', '0px')
+             })
+        
+            printf()
       });
    });
+}
+
+function printf(a){
+    console.log(a)
 }
 
 function lire(a){

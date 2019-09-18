@@ -309,7 +309,7 @@ output {
             height: 70px;
     }
 
-.article p {
+.article p span p{
             font-size: 0px;
         }
 
