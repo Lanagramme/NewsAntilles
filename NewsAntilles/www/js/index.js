@@ -74,12 +74,6 @@ function rubrique(a){
              
             $('.section' + b).append(p);
             b++;
-             
-             $('.texteA p span').each(function(index) {
-                 $('this').css('font-size', '0px');
-                 
-             })
-             
          });
         
              $('.texteA p:not(.texteA p:first-child)').each(function (index){
@@ -102,8 +96,6 @@ function rubrique(a){
              $('.texteA p span').each(function (index){
                  $(this).css('font-size', '0px')
              })
-        
-            printf()
       });
    });
 }

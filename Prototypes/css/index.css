@@ -329,6 +329,7 @@ output {
 .article img {
             margin: 0 10px;
             height: 70px;
+    width: 105px
     }
 
 .article p {
