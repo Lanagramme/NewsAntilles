@@ -55,11 +55,11 @@ function rubrique(a){
          doc.querySelectorAll('item').forEach((item) => {
       
             tit = item.querySelector('link').textContent;
+            tit = remove_character(tit, 4)
 			
-            di = document.createElement('div');
-            di.className = "article section" + b;
-			
-            di = '<div class="article section' +b+ '" onclick="lire(`' +tit+ '`)"></div>';
+            if (b%5==0) di = '<div class="section' +b+ ' haut" onclick="lire(`' +tit+ '`)"></div>';
+            else di = '<div class="article section' +b+ '" onclick="lire(`' +tit+ '`)"></div>';
+             
             $('output').append(di);
 
             h2 = document.createElement('h2');
