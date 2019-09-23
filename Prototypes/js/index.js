@@ -42,8 +42,8 @@ function rubrique(a){
     
     
    var proxyUrl = 'https://cors-anywhere.herokuapp.com/',
-    targetUrl = "http://www.newsantilles.com/index.php" + a + "?format=feed&type=rss/";
-    printf("http://www.newsantilles.com/index.php" + a + "?format=feed&type=rss/");
+    targetUrl = "http://www.newsantilles.com/index.php" + a + "?format=feed&amp;type=rss";
+    printf(targetUrl);
 	fetch(proxyUrl + targetUrl).then((res) => {
     res.text().then((xmlTxt) => {
         var domParser = new DOMParser();

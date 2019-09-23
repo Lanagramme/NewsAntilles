@@ -365,6 +365,7 @@ output {
         }
 
         .opaque{
+            z-index: 10;
             background: #000000ba;    
             position: absolute;
             bottom: 0;
@@ -469,7 +470,7 @@ output {
 .haut h2{
     position: absolute;
     bottom: 0;
-    z-index: 10;
+    z-index: 1;
     background: red;
     min-height: 30px;
     width: 100%;
