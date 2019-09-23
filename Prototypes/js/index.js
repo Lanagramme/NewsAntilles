@@ -1,4 +1,4 @@
-rubrique('');
+rubrique('k');
 $('#frist').css('border-bottom', '2px solid #db5e11');
 $(".splash").delay( 1000 ).fadeOut( 400 );
 $('.parametres').click(function() {
@@ -33,6 +33,7 @@ function rubrique(a){
       if (item.classList.contains(a))
       {item.style.borderBottom = '2px solid #db5e11';}
    }
+    if (a=='k') a = "";
 
 
    b=0;
