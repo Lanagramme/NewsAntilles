@@ -10,6 +10,7 @@ $('.propos').click(function() {
 $('.vers').click(function() {
    $('#build').toggle('slow');
 });
+
 function affMenu(){
    $(".all" ).hide();
    $(".opaque").toggle();
@@ -33,7 +34,8 @@ function rubrique(a){
       if (item.classList.contains(a))
       {item.style.borderBottom = '2px solid #db5e11';}
    }
-
+   
+    $('.titlebar h1').html(a);
 
    b=0;
    $('output').html('');
