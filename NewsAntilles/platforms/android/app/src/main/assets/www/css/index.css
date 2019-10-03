@@ -19,8 +19,24 @@ body {
     width:100%;
     display: grid;
     grid-template-rows: 57px 35px 1fr;
- 
+    
+    
+ }
+
+/*Pour les écrans de minimum 320 de largeur*/
+@media screen and (max-width: 320px) {
+    .side{
+        width: 80%;
+    }
+}/*Pour les écrans de minimum 321 de largeur*/
+@media screen and (min-width: 321px) {
+    .side{
+        width: 310px;
+    }
 }
+
+
+
 
 .splash{
     position: absolute;
@@ -50,7 +66,6 @@ body {
 
 .side{
     top: 0px; bottom: 0; left: 0;
-    width: 310px;
     max-height: 100vh;
     position: absolute;
     background-color: #FDFEFE;
@@ -123,21 +138,13 @@ h4{
     font-family: inherit;
     font-size: 13px;
     font-weight: 500;
-    margin-bottom: 3px;
-    
+    margin-bottom: 15px;    
     
     }
 
-
 /*bouton notification*/
-.container{
-    position:relative;
-    padding-left:76%;
-    margin-top:-21px;
-    margin-bottom: -2px;
-     
           
-}
+
 .toggle-btn{
     width: 50px;
     height:25px;
@@ -168,21 +175,23 @@ h4{
 
 
 /*séparateur*/
-#hr1, #hr2, #hr3, #hr4, #hr5, #hr6, #hr7{
+#hr1, #hr2, #hr3, #hr4, #hr5, #hr6{
+      
       margin-right: 20px;
       margin-left: -20px;
     
         }
 
-#hr8, #hr9{
-    margin-left: -7px;
+#hr7, #hr8{
+    margin-left: -15px;
 } 
 
-#hr10, #hr11, #hr12, #hr13, #hr15, #hr16{
-    margin-left: -7px;
+#hr9, #hr10, #hr11, #hr12, #hr13, #hr14, #hr15{
+    margin-left: -15px;
     margin-top: 11px;
     
 }
+
 
 /*------------------*/
 
@@ -200,9 +209,7 @@ h4{
     padding-left: 7px;
     
     
-    
-
-    }
+}
 
 li.parametres{
     background-image: url(../img/2674077-20.png);
@@ -212,9 +219,29 @@ li.parametres{
     padding-left: 26px;
     font-family: inherit;
     transition-duration: 1s;
+    
 }
 
-li.vers{
+.ai {
+    padding-right: 10px;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    
+     }
+
+#param.togglable, #contact.togglable, #build.togglable{
+    
+        margin-left: -7px;
+        background-color: #c9c9c9;
+ 
+    }
+
+#param, #contact, #build{
+    padding-left: 13px;
+    } 
+
+
+li.vers {
     background-image: url(../img/4229843-20.png);
     background-repeat: no-repeat;
     background-position: left;
@@ -222,8 +249,7 @@ li.vers{
     padding-left: 26px;
     font-family: inherit;
     
-    
-}
+    }
 
 
 li.propos{
@@ -233,13 +259,10 @@ li.propos{
     font-size: 15px;
     padding-left: 26px;
     font-family: inherit;
+    
 }
 
-#build{
-    margin-top: -8px;
-    margin-bottom: -8px;
-    padding-left: 27px;
-}
+
 
 .titlebar {
     color: white;
@@ -262,7 +285,6 @@ li.propos{
     }
 
 .button-direct {
-        background: #cc641f;
         padding: 5px 10px;
         border-radius: 5px;
     }
@@ -309,7 +331,7 @@ output {
             height: 70px;
     }
 
-.article p {
+.article p span p{
             font-size: 0px;
         }
 
@@ -363,7 +385,7 @@ output {
     .page-bar{
         background: #2e62c2;
         border-bottom: 3px solid #cc641f;
-        width: 100px;
+        width: 60px;
         display: grid;
         align-items: center;
         padding: 10px;   

@@ -36,14 +36,12 @@
                                 <hr id="hr2">
                         <li onclick="rubrique('politique')">POLITIQUE</li>
                                 <hr id="hr3">
-                        <li onclick="rubrique('international')">ECONOMIE</li>
+                        <li onclick="rubrique('faits-d-hivers')">ECONOMIE</li>
                                 <hr id="hr4">
                         <li onclick="rubrique('culture')">CULTURE</li>
                                 <hr id="hr5">
-                        <li onclick="rubrique('logiciel')">SPORT</li>
+                        <li onclick="rubrique('sport')">SPORT</li>
                                 <hr id="hr6">
-                        <li onclick="rubrique('planete')">PHOTOS</li>
-                                <hr id="hr7">
                     </ul>
                     
                      <!---AUTRES--->
@@ -54,16 +52,19 @@
                     <ul class="deux">
                         <li class="parametres">Paramètres</li>
                             <div id="param" class="togglable" style="display: none">
-                                  <hr id="hr8">
-                                  <li>Alertes Info</li>
-                                   <div class="container">
+                                  <hr id="hr7">
+                                  <li class="ai">
+                                      <span>Alertes Info</span>
+                                  <div class="container">
                                     <div class="toggle-btn" onclick="toggle('active')">                 
                                         <div class="inner-circle"></div>
                                         </div>
+                                                               
                                     </div>
-                                    <hr id="hr9">
+                                    </li>
+                                    <hr id="hr8">
                                     <li>Affichage des articles</li>
-                                    <hr id="hr10">
+                                    <hr id="hr9">
                                  </div>
                                <br/>  
                               <li class="propos">A propos</li>
@@ -79,7 +80,9 @@
                         <br/>
                         <li class="vers">Version</li>
                              <div id="build"  class="togglable" style="display: none">
-                                 <h5>build 1.0</h5>
+                                 <hr id="hr14">
+                                 <li>Build 1.0</li>
+                                 <hr id="hr15">
                              </div>
                     </ul>
                 </div>
@@ -90,7 +93,7 @@
         <div class="titlebar">
             <img onclick="affMenu()" class="button-menu" src="img/menu.png" alt="">
             <h1>Dernières infos</h1>
-            <div class="button-direct">LE DIRECT</div>
+            <div class="button-direct"></div>
         </div>
         <div class="navbar">
             <div class="all2">
@@ -98,10 +101,9 @@
                     <li class='under societe' id="frist" onclick="rubrique('societe')">EN BREF</li>
                     <li class='under societe'   onclick="rubrique('societe')">SOCIETE</li>
                     <li class='under politique' onclick="rubrique('politique')">POLITIQUE</li>
-                    <li class='under international' onclick="rubrique('international')">ECONOMIE</li>
+                    <li class='under international' onclick="rubrique('faits-d-hivers')">ECONOMIE</li>
                     <li class='under culture'  onclick="rubrique('culture')">CULTURE</li>
-                    <li class='under logiciel' onclick="rubrique('logiciel')">SPORT</li>
-                    <li class='under planete'  onclick="rubrique('planete')">PHOTOS</li>
+                    <li class='under logiciel' onclick="rubrique('sport')">SPORT</li>
                  </ul>
             </div>
         </div>
