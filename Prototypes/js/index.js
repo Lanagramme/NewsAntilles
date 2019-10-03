@@ -1,4 +1,4 @@
-rubrique('k');
+rubrique('/societe');
 $('#frist').css('border-bottom', '2px solid #db5e11');
 $(".splash").delay( 1000 ).fadeOut( 400 );
 $('.parametres').click(function() {
