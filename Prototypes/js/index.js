@@ -26,6 +26,11 @@ function affAccueil(){
    $("output").show();
 }
 
+function hideMenu(){
+   $('.side').css('margin-left', '-100%'); 
+   $(".opaque").fadeOut( 200 );
+}
+
 function rubrique(a){
    affAccueil();
    under = document.getElementsByClassName('under');
@@ -54,8 +59,8 @@ function rubrique(a){
         } catch (error) { }
         
          doc.querySelectorAll('item').forEach((item) => {
-      
-            tit = item.querySelector('link').textContent;
+     
+             tit = item.querySelector('link').textContent;
             tit = remove_character(tit, 4)
 			
             if (b%5==0) di = '<div class="section' +b+ ' haut" onclick="lire(`' +tit+ '`)"></div>';

@@ -1,4 +1,4 @@
-rubrique('societe');
+rubrique('/societe');
 $('#frist').css('border-bottom', '2px solid #db5e11');
 $(".splash").delay( 1000 ).fadeOut( 400 );
 $('.parametres').click(function() {
@@ -10,7 +10,6 @@ $('.propos').click(function() {
 $('.vers').click(function() {
    $('#build').toggle('slow');
 });
-
 function affMenu(){
    $(".all" ).hide();
    $(".opaque").toggle();
@@ -27,6 +26,11 @@ function affAccueil(){
    $("output").show();
 }
 
+function hideMenu(){
+   $('.side').css('margin-left', '-100%'); 
+   $(".opaque").fadeOut( 200 );
+}
+
 function rubrique(a){
    affAccueil();
    under = document.getElementsByClassName('under');
@@ -34,8 +38,8 @@ function rubrique(a){
       if (item.classList.contains(a))
       {item.style.borderBottom = '2px solid #db5e11';}
    }
-   
-    $('.titlebar h1').html(a);
+    if (a=='k') a = "";
+
 
    b=0;
    $('output').html('');
@@ -44,7 +48,8 @@ function rubrique(a){
     
     
    var proxyUrl = 'https://cors-anywhere.herokuapp.com/',
-    targetUrl = "http://www.newsantilles.com/index.php/" + a + "?format=feed&type=rss/";
+    targetUrl = "www.newsantilles.com/index.php" + a + "?format=feed&amp;type=rss";
+    printf(targetUrl);
 	fetch(proxyUrl + targetUrl).then((res) => {
     res.text().then((xmlTxt) => {
         var domParser = new DOMParser();
@@ -54,13 +59,13 @@ function rubrique(a){
         } catch (error) { }
         
          doc.querySelectorAll('item').forEach((item) => {
-      
-            tit = item.querySelector('link').textContent;
+     
+             tit = item.querySelector('link').textContent;
+            tit = remove_character(tit, 4)
 			
-            di = document.createElement('div');
-            di.className = "article section" + b;
-			
-            di = '<div class="article section' +b+ '" onclick="lire(`' +tit+ '`)"></div>';
+            if (b%5==0) di = '<div class="section' +b+ ' haut" onclick="lire(`' +tit+ '`)"></div>';
+            else di = '<div class="article section' +b+ '" onclick="lire(`' +tit+ '`)"></div>';
+             
             $('output').append(di);
 
             h2 = document.createElement('h2');
@@ -72,9 +77,9 @@ function rubrique(a){
             p = document.createElement('p');
             p.innerHTML = item.querySelector('description').textContent;
             p.className = "texteA";
-             
-             
+            p.id = 'id'+b
             $('.section' + b).append(p);
+            argent(b)
             b++;
          });
         
@@ -82,7 +87,6 @@ function rubrique(a){
                  $(this).css('height', '0px')
                  $(this).css('margin', '0px')
              })
-        
              $('.texteA p span').each(function (index){
                  $('.article img').css('height','70px')
                  $('.article img').css('width','105px')
@@ -99,7 +103,15 @@ function rubrique(a){
                  $(this).css('font-size', '0px')
              })
       });
+        
    });
+
+}
+
+function argent(i){
+        let a = $('#id' + i + ' img:first-child').prop('src')
+        a = remove_character(a, 4)
+        $('#id' + i).html(`<img src='${a}'></img>`);
 }
 
 function printf(a){
@@ -119,3 +131,10 @@ function closeFrame(){
    g = document.getElementsByClassName('page-article');
    g[0].parentNode.removeChild(g[0]);
 }
+
+function remove_character(str, char_pos) 
+ {
+  part1 = str.substring(0, char_pos);
+  part2 = str.substring(char_pos + 1, str.length);
+  return (part1 + part2);
+ }
