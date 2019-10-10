@@ -49,7 +49,6 @@ function rubrique(a){
     
    var proxyUrl = 'https://cors-anywhere.herokuapp.com/',
     targetUrl = "www.newsantilles.com/index.php" + a + "?format=feed&amp;type=rss";
-    printf(targetUrl);
 	fetch(proxyUrl + targetUrl).then((res) => {
     res.text().then((xmlTxt) => {
         var domParser = new DOMParser();
@@ -112,10 +111,6 @@ function argent(i){
         let a = $('#id' + i + ' img:first-child').prop('src')
         a = remove_character(a, 4)
         $('#id' + i).html(`<img src='${a}'></img>`);
-}
-
-function printf(a){
-    console.log(a)
 }
 
 function lire(a){
