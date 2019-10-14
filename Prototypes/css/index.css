@@ -343,6 +343,8 @@ output {
     top: 0;
     left: 0;
     z-index: 100;
+    animation-duration: 300ms;
+
 }
     .close {
         background: #2e62c2;
