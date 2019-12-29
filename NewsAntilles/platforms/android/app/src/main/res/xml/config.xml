@@ -13,8 +13,14 @@
     </author>
     <content src="index.html" />
     <access origin="*" />
+    <access origin="https://cors-anywhere.herokuapp.com/" />
+    <access origin="http://www.newsantilles.com/index.php/" />
+    <allow-navigation href="https://cors-anywhere.herokuapp.com/*" />
+    <allow-navigation href="http://www.newsantilles.com/index.php/*" />
     <allow-intent href="http://*/*" />
+    <allow-intent href="http://www.newsantilles.com/index.php/*" />
     <allow-intent href="https://*/*" />
+    <allow-intent href="https://cors-anywhere.herokuapp.com/*" />
     <allow-intent href="tel:*" />
     <allow-intent href="sms:*" />
     <allow-intent href="mailto:*" />
