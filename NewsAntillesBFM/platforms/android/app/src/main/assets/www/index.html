@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="format-detection" content="telephone=no">
+        <meta name="msapplication-tap-highlight" content="no">
+        <meta http-equiv="Content-Security-Policy" script-src='unsafe-inline';>
+        <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
+        <title>NewsAntilles</title>
+        <link rel="stylesheet" type="text/css" href="css/index.css">
+        <script defer type="text/javascript" src="js/jquery-3.4.1.js"></script>
+        <script defer type="text/javascript" src="js/index.js"></script>
+    </head>
+    <body>
+           
+    <!---PAGE D'ACCUEIL--->
+            <div class="splash">
+                <div class="splashlogo">
+                    <img class="logo" src="img/logonew2.jpg" alt="">
+                </div>
+            </div>
+            
+    <!---ACCUEIL/SIDEBAR/MENU--->
+            <div class="side">
+                <div class="headtitle">  
+                <img src="img/logonew.jpg" class="img1"/> 
+                </div>
+                <div class="menucontent"></div>
+                <div class="rubriques">
+                    <h4>Rubriques</h4>
+                </div>
+                <div class="contents">
+                    <ul class="un">
+                                <hr id="hr1">
+                        <li onclick="rubrique('')">SOCIETE</li>
+                                <hr id="hr2">
+                        <li onclick="rubrique('/politique')">POLITIQUE</li>
+                                <hr id="hr3">
+                        <li onclick="rubrique('/faits-d-hivers')">ECONOMIE</li>
+                                <hr id="hr4">
+                        <li onclick="rubrique('/culture')">CULTURE</li>
+                                <hr id="hr5">
+                        <li onclick="rubrique('/sport')">SPORT</li>
+                                <hr id="hr6">
+                    </ul>
+                    
+                     <!---AUTRES--->
+                   
+                        <div class="autres">
+                        <h4>Autres</h4>
+                    </div>
+                    <ul class="deux"><!---
+                        <li class="parametres">Paramètres</li>
+                            <div id="param" class="togglable" style="display: none">
+                                  <hr id="hr7">
+                                  <li class="ai">
+                                      <span>Alertes Info</span>
+                                  <div class="container">
+                                    <div class="toggle-btn" onclick="toggle('active')">                 
+                                        <div class="inner-circle"></div>
+                                        </div>
+                                                               
+                                    </div>
+                                    </li>
+                                    <hr id="hr8">
+                                    <li>Affichage des articles</li>
+                                    <hr id="hr9">
+                                 </div>
+                               <br/>  --->
+                              <li class="propos">A propos</li>
+                                <div id="contact"  class="togglable" style="display: none">
+                                    <hr id="hr10">
+                                    <li>Nous contacter</li>
+                                    <hr id="hr11">
+                                    <li>Notez l'application</li>
+                                    <hr id="hr12">
+                                    <li>Recommander l'application</li>
+                                    <hr id="hr13">
+                                </div>
+                        <br/>
+                        <li class="vers">Version</li>
+                             <div id="build"  class="togglable" style="display: none">
+                                 <hr id="hr14">
+                                 <li>Build 1.0</li>
+                                 <hr id="hr15">
+                             </div>
+                    </ul>
+                </div>
+            </div>
+            <div onclick='hideMenu()' class="opaque"></div>
+       
+
+        <div class="titlebar">
+            <img onclick="affMenu()" class="button-menu" src="img/menu.png" alt="">
+            <h1>News Antilles</h1>
+            <div class="button-direct"></div>
+        </div>
+        <div class="navbar">
+            <div class="all2">
+                <ul>
+                    <li class='under /societe'   onclick="rubrique('/societe')">SOCIETE</li>
+                    <li class='under /politique' onclick="rubrique('/politique')">POLITIQUE</li>
+                    <li class='under /faits-d-hivers' onclick="rubrique('/faits-d-hivers')">ECONOMIE</li>
+                    <li class='under /culture'  onclick="rubrique('/culture')">CULTURE</li>
+                    <li class='under /sport' onclick="rubrique('/sport')">SPORT</li>
+                 </ul>
+            </div>
+        </div>
+         <output>
+                
+         </output>
+    
+ </body>
+</html>

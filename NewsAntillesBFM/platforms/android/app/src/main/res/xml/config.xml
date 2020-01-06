@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget id="io.cordova.hellocordova" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+    <feature name="Whitelist">
+        <param name="android-package" value="org.apache.cordova.whitelist.WhitelistPlugin" />
+        <param name="onload" value="true" />
+    </feature>
+    <name>NewsAntilles</name>
+    <description>
+        L'application officielle de NewsAntilles.
+    </description>
+    <author email="dev@cordova.apache.org" href="http://cordova.io">
+        Apache Cordova Team
+    </author>
+    <content src="index.html" />
+    <access origin="*" />
+    <access origin="https://cors-anywhere.herokuapp.com/" />
+    <access origin="http://www.newsantilles.com/index.php/" />
+    <allow-navigation href="https://cors-anywhere.herokuapp.com/*" />
+    <allow-navigation href="http://www.newsantilles.com/index.php/*" />
+    <allow-intent href="http://*/*" />
+    <allow-intent href="http://www.newsantilles.com/index.php/*" />
+    <allow-intent href="https://*/*" />
+    <allow-intent href="https://cors-anywhere.herokuapp.com/*" />
+    <allow-intent href="tel:*" />
+    <allow-intent href="sms:*" />
+    <allow-intent href="mailto:*" />
+    <allow-intent href="geo:*" />
+    <allow-intent href="market:*" />
+    <preference name="loglevel" value="DEBUG" />
+</widget>
