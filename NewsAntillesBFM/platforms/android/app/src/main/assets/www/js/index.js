@@ -1,4 +1,4 @@
-rubrique('/societe');
+rubrique('/info/flux-rss/flux-toutes-les-actualites/');
 $('#frist').css('border-bottom', '2px solid #db5e11');
 $(".splash").delay( 1000 ).fadeOut( 400 );
 $('.parametres').click(function() {
@@ -38,17 +38,16 @@ function rubrique(a){
       if (item.classList.contains(a))
       {item.style.borderBottom = '2px solid #db5e11';}
    }
-    if (a=='k') a = "";
-
 
    b=0;
    $('output').html('');
    spin = '<div class="lds-ellipsis" style="margin-left: 45vw; margin-top: 40vh;"><div></div><div></div><div></div><div></div></div>';
    $('output').append(spin);
     
-    
    var proxyUrl = 'https://cors-anywhere.herokuapp.com/',
-    targetUrl = "www.newsantilles.com/index.php" + a + "?format=feed&amp;type=rss";
+    targetUrl = "www.bfmtv.com/rss/" + a;
+    console.log(a)
+    console.log(proxyUrl + targetUrl)
 	fetch(proxyUrl + targetUrl).then((res) => {
     res.text().then((xmlTxt) => {
         var domParser = new DOMParser();
@@ -59,8 +58,7 @@ function rubrique(a){
         
          doc.querySelectorAll('item').forEach((item) => {
      
-             tit = item.querySelector('link').textContent;
-            tit = remove_character(tit, 4)
+            tit = item.querySelector('link').textContent;
 			
             if (b%5==0) di = '<div class="section' +b+ ' haut" onclick="lire(`' +tit+ '`)"></div>';
             else di = '<div class="article section' +b+ '" onclick="lire(`' +tit+ '`)"></div>';
@@ -109,7 +107,6 @@ function rubrique(a){
 
 function argent(i){
         let a = $('#id' + i + ' img:first-child').prop('src')
-        a = remove_character(a, 4)
         $('#id' + i).html(`<img src='${a}'></img>`);
 }
 
