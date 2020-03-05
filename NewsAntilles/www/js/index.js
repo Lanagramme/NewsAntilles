@@ -39,13 +39,10 @@ function rubrique(a){
       {item.style.borderBottom = '2px solid #db5e11';}
    }
     if (a=='k') a = "";
-
-
    b=0;
    $('output').html('');
    spin = '<div class="lds-ellipsis" style="margin-left: 45vw; margin-top: 40vh;"><div></div><div></div><div></div><div></div></div>';
    $('output').append(spin);
-    
     
    var proxyUrl = 'https://cors-anywhere.herokuapp.com/',
     targetUrl = "www.newsantilles.com/index.php" + a + "?format=feed&amp;type=rss";
